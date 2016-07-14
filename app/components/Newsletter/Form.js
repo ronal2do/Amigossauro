@@ -3,45 +3,42 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: '', email: '', estado: '', cidade: '' };
+  componentDidMount() {
+        new dgCidadesEstados({
+          cidade: document.getElementById('cidade'),
+          estado: document.getElementById('estado'),
+          estadoVal: 'SP',
+          cidadeVal: 'São Paulo'
+        })
   }
-
-
   render() {
     return (
           <div className="padding-top">
-            <form className="form-horizontal">
-              <div className="form-group">
-                <div className="col-sm-12">
-                  <input type="text" name="name" id="name" className="form-control" placeholder="Nome:" value={this.state.name}/>
+              <form className="form-horizontal">
+                <div className="form-group">
+                  <div className="col-sm-12">
+                    <input type="text" name="name" id="name" className="form-control" placeholder="Nome:" />
+                  </div>
                 </div>
-              </div>
-              <div className="form-group">
-       
-                <div className="col-sm-12">
-                  <input type="email" name="email" id="email" className="form-control" placeholder="E-mail:" value={this.state.email}/>
+                <div className="form-group">
+                  <div className="col-sm-12">
+                    <input type="email" name="email" id="email" className="form-control" placeholder="E-mail:" />
+                  </div>
                 </div>
-              </div>
-              <div className="form-group">
-            
-                <div className="col-sm-12">
-                  <input type="text" name="estado" id="estado" className="form-control" placeholder="Estado:" value={this.state.estado}/>
+                <div className="form-group">
+                    <div className="col-sm-6">
+                      <select name="estado" id="estado" className="form-control"></select>
+                    </div>
+                    <div className="col-sm-6">
+                      <select name="cidade" id="cidade" className="form-control"></select>
+                    </div>
                 </div>
-              </div>
-             <div className="form-group">
-              
-                <div className="col-sm-12">
-                  <input type="text" name="cidade" id="cidade" className="form-control" placeholder="Cidade:" value={this.state.cidade}/>
+                <div className="form-group">
+                  <div className="col-sm-12">
+                    <button type="submit" className="btn btn-success">Enviar</button>
+                  </div>
                 </div>
-              </div>
-              <div className="form-group">
-                <div className="col-sm-offset-10 col-sm-12">
-                  <button type="submit" className="btn btn-success">Enviar</button>
-                </div>
-              </div>
-            </form>
+              </form>
           </div>
     );
   }

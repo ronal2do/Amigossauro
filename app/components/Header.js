@@ -5,6 +5,20 @@ import { logout } from '../actions/auth';
 
 class Header extends React.Component {
   
+  componentDidMount() {
+     let sticky = document.querySelector('.sticky');
+
+      if (sticky.style.position !== 'sticky') {
+        let stickyTop = sticky.offsetTop;
+
+        document.addEventListener('scroll', function () {
+          window.scrollY >= stickyTop ?
+            sticky.classList.add('navbar-fixed-top') :
+            sticky.classList.remove('navbar-fixed-top');
+        });
+      }
+  }
+
   handleLogout(event) {
     event.preventDefault();
     this.props.dispatch(logout());
@@ -43,14 +57,14 @@ class Header extends React.Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            
           </div>
-
+          
           <div classNmae="container">
             <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
                 <li><IndexLink to="/" activeStyle={active}>Home</IndexLink></li>
-                <li><Link to="/contact" activeStyle={active}>Contact</Link></li>
+                <li><Link to="/amizade" activeStyle={active}>Era da Amizade</Link></li>
+                <li><Link to="/contact" activeStyle={active}>Contato</Link></li>
               </ul>
               {rightNav}
             </div>

@@ -7,7 +7,7 @@ class Head extends React.Component {
     return (
       <div className="Head">
        		<div className="static">
-	            Meu Logotipo
+	           <Logo />
 	        </div>
        		<Header />
       </div>

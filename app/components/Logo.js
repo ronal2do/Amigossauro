@@ -5,8 +5,7 @@ class Logo extends React.Component {
   render() {
     return (
       <div className="Logo">
-       	<IndexLink to="/" className="navbar-brand">Amigossauro</IndexLink>
-       	<br/ >
+       	<IndexLink to="/"><img src="/images/logo_amigossauro.png" alt="" /></IndexLink>       	
       </div>
     );
   }

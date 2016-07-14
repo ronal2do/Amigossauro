@@ -5827,10 +5827,13 @@ body {
 
 footer {
   position: absolute;
+  display: flex;
   width: 100%;
-  height: 44px;
-  padding: 10px 30px;
-  bottom: 0;
+  height: 311px;
+  margin: 37px 0 0;
+  padding: 30px;
+  /* bottom: 0; */
+  align-items: flex-end;
   background-color: #fff;
   border-top: 1px solid #e0e0e0; }
 
@@ -5974,6 +5977,13 @@ textarea {
   letter-spacing: 0.2em;
   text-transform: uppercase; }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase; }
+
 .Dim {
   background-color: #75ccff;
   color: #004771; }
@@ -5994,3 +6004,52 @@ textarea {
 
 .Titulo-Deco {
   color: #860202; }
+
+.form-control:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 6px 0px #3f51b5, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+
+.container {
+  max-width: 800px; }
+
+.navbar {
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 1px solid transparent; }
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  border-top: 3px solid pink;
+  background-color: #b70808;
+  background-size: 100px 100px;
+  color: white;
+  text-align: center; }
+
+.fixed {
+  position: fixed; }
+
+.static {
+  padding: 5em 0 20em;
+  background: #1085bc;
+  color: white;
+  text-align: center; }
+
+.Logo img {
+  width: 327px;
+  height: 127px; }
+
+.Azul {
+  color: blue; }
+
+.Padding-top {
+  padding-top: 40px; }
+
+.form-group {
+  margin-bottom: 10px; }
+
+.Newsletter {
+  margin: 15px; }

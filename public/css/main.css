@@ -5949,11 +5949,24 @@ textarea {
   resize: none; }
 
 .form-control {
-  height: auto;
-  padding: 9px 4px;
+  background-color: #cbf0f6;
+  color: #006ebd;
+  padding: 9px;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 6px 0px #3f51b5, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+  box-shadow: 0 3px 0px #006ebd, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+
+.form-control::-webkit-input-placeholder {
+  color: #006ebd; }
+
+.form-control:-moz-placeholder {
+  color: #006ebd; }
+
+.form-control::-moz-placeholder {
+  color: #006ebd; }
+
+.form-control:-ms-input-placeholder {
+  color: #006ebd; }
 
 .form-group > label {
   text-transform: uppercase;
@@ -5985,30 +5998,30 @@ h5 {
   text-transform: uppercase; }
 
 .Dim {
-  background-color: #75ccff;
+  background-color: #cbf0f6;
   color: #004771; }
 
 .Dana {
-  background-color: #fffdb5;
-  color: #96002a; }
+  background-color: #fdf2c4;
+  color: #c14989; }
 
 .Deco {
-  background-color: #ffb5b5;
-  color: #860202; }
+  background-color: #ffe6e9;
+  color: #dc2e27; }
 
 .Titulo-Dim {
   color: #004771; }
 
 .Titulo-Dana {
-  color: #96002a; }
+  color: #c14989; }
 
 .Titulo-Deco {
-  color: #860202; }
+  color: #dc2e27; }
 
 .form-control:focus {
   border-color: transparent;
   outline: 0;
-  box-shadow: 0 6px 0px #3f51b5, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+  box-shadow: 0 6px 0px #006ebd, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
 
 .container {
   max-width: 800px; }
@@ -6023,8 +6036,8 @@ h5 {
   top: 0;
   width: 100%;
   padding: 0;
-  border-top: 3px solid pink;
-  background-color: #b70808;
+  border-top: 3px solid #fe4f6e;
+  background-color: #e81f4d;
   background-size: 100px 100px;
   color: white;
   text-align: center; }
@@ -6043,7 +6056,7 @@ h5 {
   height: 127px; }
 
 .Azul {
-  color: blue; }
+  color: #006ebd; }
 
 .Padding-top {
   padding-top: 40px; }
@@ -6053,3 +6066,33 @@ h5 {
 
 .Newsletter {
   margin: 15px; }
+
+.Icone {
+  margin: 10px 5px;
+  color: white;
+  border-radius: 100px;
+  -webkit-transition: all;
+  -ms-transition: all;
+  shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0px #ffffff, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+  .Icone-facebook {
+    padding: 5px 10px;
+    background-color: #1eabd9; }
+  .Icone-instagram {
+    background-color: #b188b4;
+    padding: 5px 7px; }
+  .Icone-youtube {
+    background-color: #df1c2d;
+    padding: 5px 7px; }
+
+.btn-newsletter {
+  text-transform: uppercase;
+  color: white;
+  background: #f81948;
+  border-radius: 11px;
+  box-shadow: 0 3px 0px #540404, inset 0 1px 15px rgba(150, 160, 175, 0.05);
+  padding: 6px 31px;
+  border-color: transparent; }
+
+h1 {
+  color: #dc2e27; }

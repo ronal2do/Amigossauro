@@ -9,7 +9,7 @@ var User = require('../models/User');
 
 function generateToken(user) {
   var payload = {
-    iss: 'my.domain.com',
+    iss: 'www.amigossauro.com.br',
     sub: user.id,
     iat: moment().unix(),
     exp: moment().add(7, 'days').unix()
@@ -62,8 +62,8 @@ exports.ensureAuthenticated = function(req, res, next) {
  * POST /signup
  */
 exports.signupPost = function(req, res, next) {
-  req.assert('name', 'Name cannot be blank').notEmpty();
-  req.assert('email', 'Email is not valid').isEmail();
+  req.assert('name', 'Não pode estar vazio').notEmpty();
+  req.assert('email', 'Email não é valido').isEmail();
   req.assert('email', 'Email cannot be blank').notEmpty();
   req.assert('password', 'Password must be at least 4 characters long').len(4);
   req.sanitize('email').normalizeEmail({ remove_dots: false });
@@ -76,7 +76,7 @@ exports.signupPost = function(req, res, next) {
 
   User.findOne({ email: req.body.email }, function(err, user) {
     if (user) {
-    return res.status(400).send({ msg: 'The email address you have entered is already associated with another account.' });
+    return res.status(400).send({ msg: 'O endereço de e-mail que você digitou já está associado a outra conta.' });
     }
     user = new User({
       name: req.body.name,

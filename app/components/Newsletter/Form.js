@@ -7,8 +7,8 @@ class Form extends React.Component {
         new dgCidadesEstados({
           cidade: document.getElementById('cidade'),
           estado: document.getElementById('estado'),
-          estadoVal: 'SP',
-          cidadeVal: 'São Paulo'
+          estadoVal: '',
+          cidadeVal: ''
         })
   }
   render() {
@@ -35,7 +35,7 @@ class Form extends React.Component {
                 </div>
                 <div className="form-group">
                   <div className="col-sm-12">
-                    <button type="submit" className="btn btn-success">Enviar</button>
+                    <button type="submit" className="btn btn-success btn-newsletter pull-right">Enviar</button>
                   </div>
                 </div>
               </form>

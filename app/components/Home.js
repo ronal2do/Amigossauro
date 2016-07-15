@@ -24,7 +24,7 @@ class Home extends React.Component {
           />
           <Videos />
           <Frase />
-          <Newsletter />
+        <Newsletter className="col-sm-12" style={{padding:'0px'}}/>
 
       </div>
     );

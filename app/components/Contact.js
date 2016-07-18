@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { submitContactForm } from '../actions/contact';
 import Messages from './Messages';
+import Social from './Social';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -21,7 +22,9 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="container">
-
+        <div className="pull-right"> 
+          <Social />
+        </div>
           <div className="col-sm-12">
             <div className="Padding-top"></div>
             <h1>Contato</h1>

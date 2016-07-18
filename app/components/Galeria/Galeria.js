@@ -1,9 +1,13 @@
 import React from 'react';
-import { render } from 'react-dom';
 
-data = [{"id":"VadjvlvBDxE"},{"id":"hsfA4kTdltE"},{"id":"c_yomf6U35A"},{"id":"DfRibIkjhew"}];
+const data = {
+  id:"VadjvlvBDxE",
+  id:"hsfA4kTdltE",
+  id:"c_yomf6U35A",
+  id:"DfRibIkjhew"
+};
 
-var selectedImg = React.createClass({
+var SelectedImg = React.createClass({
   render: function() {
     return (
       <div className="embed-responsive embed-responsive-16by9">
@@ -13,13 +17,13 @@ var selectedImg = React.createClass({
   }  
 });
 
-var imgItem = React.createClass({
+var ImgItem = React.createClass({
   render: function() {
     return (<img src={'http://img.youtube.com/vi/' + this.props.path + '/default.jpg'} />)
   }
 });
 
-var imgRow = React.createClass({
+var ImgRow = React.createClass({
   render: function() {
     return (
       <div className="img-row">
@@ -36,7 +40,7 @@ var Youtube = React.createClass({
     var image = '//www.youtube.com/embed/' + imageid; 
     this.setState({heroimg: image});
   },
-  getInitialState: function() {
+  getInitialState() {
     return {
       heroimg: '//www.youtube.com/embed/cuMezEwKFLU/',
       images: this.props.data
@@ -45,19 +49,19 @@ var Youtube = React.createClass({
   render: function() {
     return (
       <div className="main">   
-        <selectedImg hero={this.state.heroimg} />
-        <imgRow>
+        <SelectedImg hero={this.state.heroimg} />
+        <ImgRow>
           {this.state.images.map(function(image) {
               return (
                 <li onClick={this.handleClick.bind(this,image.id)}>
-                  <imgItem path={image.id} />
+                  <ImgItem path={image.id} />
                 </li>
               )
             }, this)}
-        </imgRow>
+        </ImgRow>
       </div>
     );
   }
 });
  
-export default (Youtube);
+export default Youtube;

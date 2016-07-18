@@ -11,7 +11,7 @@ class Amizade extends React.Component {
     return (
       <div className="container">
         <Messages messages={this.props.messages}/>
-        <div className="row pull-right"> 
+        <div className="pull-right"> 
           <Social />
         </div>
         <div className="row">

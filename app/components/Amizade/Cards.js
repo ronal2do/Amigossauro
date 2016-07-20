@@ -8,10 +8,10 @@ class Card extends React.Component {
           <div className={ 'panel ' + this.props.titulo }>
             <div className="panel-body">
               <div className="col-sm-4">
-                <img src={ this.props.src } className="img-responsive"/>
+                <img src={'./images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src}/>
               </div>
               <div className="col-sm-3">
-                <img src={ this.props.src } className="img-responsive"/>
+                <img src={'./images/' + this.props.src + '-casa.png' } className="img-responsive" alt={this.props.src}/>
               </div>
               <div className="col-sm-5 text-right">
                   <p>{ this.props.texto }</p>

@@ -7,7 +7,9 @@ class App extends React.Component {
     return (
       <div>
         <Head/>
-        {this.props.children}
+        <div className="Fundo">
+        	{this.props.children}
+        </div>
         <Footer/>
       </div>
     );

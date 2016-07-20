@@ -21,7 +21,7 @@ class Home extends React.Component {
           <Box 
             titulo="Ruaar"
             texto="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, repellendus adipisci dolore officia aut voluptatum ullam. <bold>Accusamus</bold> ducimus voluptatem dolor et autem illo veniam culpa hic repudiandae, iusto nulla quo."
-            foto="http://placehold.it/250x250"
+            src="dana"
           />
           <Videos />          
 

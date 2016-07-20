@@ -4,7 +4,7 @@ const NotFound = (props) => {
   return (
     <div className="container text-center">
       <h1>404</h1>
-      <p>Page Not Found</p>
+      <p>Not found :`(</p>
     </div>
   );
 };

@@ -1,15 +1,15 @@
 $body-bg: #f4f4f4;
 $line-height-base: 1.57142857;
-$link-color: #1d7cf4;
+$link-color: #0270ab;
 $link-hover-decoration: none;
-$azul-escuro:#006ebd;
-$azul-claro: #cbf0f6;
-$rosa:#ffe6e9;
-$deco:#dc2e27;
-$dana:#fdf2c4;
-$danatexto:#c14989;
+$azul-escuro:#0270ab;
+$azul-claro: #c7f3f4;
+$rosa:#ffe7ea;
+$deco:#db2e2a;
+$dana:#fcf1c4;
+$danatexto:#bf4d93;
 $dim:#cbf0f6;
-$dimtexto:#006ab6;
+$dimtexto:#0270ab;
 
 $menu-ativo:#e5e209;
 
@@ -56,19 +56,24 @@ html {
 
 body {
   margin-bottom: 44px;
+  background-color: #fff;
 }
 
 footer {
     position: absolute;
     display: flex;
     width: 100%;
-    height: 311px;
+    height: 572px;
     margin: 37px 0 0;
     padding: 30px;
-    /* bottom: 0; */
+    background-image: url(../images/footer.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
     align-items: flex-end;
     background-color: #fff;
-    border-top: 1px solid #e0e0e0;
+    // border-top: 1px solid #e0e0e0;
+    color: #fff;
 }
 
 .login-container {
@@ -328,8 +333,8 @@ h5{
       top: 0;
       width: 100%;
       padding: 0;
-      border-top: 3px solid #fe4f6e;
-      background-color: #e81f4d;
+      border-top: 3px solid #ea547a;
+      background-color: #e12347;
       background-size: 100px 100px;
       color: white;
       text-align: center;
@@ -340,6 +345,9 @@ h5{
     .static {
       padding: 5em 0 20em;
       background: #1085bc;
+      background-image: url(../images/header.png);
+      background-size: cover;
+      background-position: center;
       color: white;
       text-align: center;
     }
@@ -368,7 +376,7 @@ h5{
     -webkit-transition: all;
     -ms-transition: all;
     shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 3px 0px #ffffff, inset 0 1px 15px rgba(150, 160, 175, 0.05);
+    box-shadow: 0 2px 0px #ffffff, inset 0 1px 15px rgba(150, 160, 175, 0.05);
     &-facebook{
        padding: 5px 10px;
        background-color: #1eabd9;
@@ -394,6 +402,10 @@ h5{
 h1{
   color: $deco;
 }
+.navbar-default .navbar-nav > li > a{
+  font-size: 18px;
+  color: #fff;
+}
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -405,3 +417,26 @@ h1{
 .Frase-youtube{
   text-align:center;
 };
+.Fundo{
+    background-image: url(../images/bg.png);
+    background-repeat: repeat;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    border-bottom-color: #f88144;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #f88144;
+    background-color: transparent;
+}
+@media only screen and (min-width: 768px) {
+    .Itens {
+      padding: 0 8px;
+    }
+   .Itens:first-child {
+         padding-left: 0px;
+    }
+    .Itens:last-child {
+         padding-right: 0px;
+    }
+}
+

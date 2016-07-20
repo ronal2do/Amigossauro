@@ -6,6 +6,7 @@ import Video from './Video';
   	const videoIdA = "VadjvlvBDxE";
 	const videoIdB = "VVS2tqpXiZ0";
 	const videoIdC = "c_yomf6U35A";
+	const videoIdD = "WIksma_8Ka4";
   
 export default class Videos extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class Videos extends React.Component {
     this.onChangeVideo  = this.onChangeVideo.bind(this);
     this.onChangeVideoB = this.onChangeVideoB.bind(this);
     this.onChangeVideoC = this.onChangeVideoC.bind(this);
+    this.onChangeVideoD = this.onChangeVideoD.bind(this);
 }
 
   onChangeVideo(e) {
@@ -35,7 +37,11 @@ export default class Videos extends React.Component {
 	this.setState({videoId: videoIdC})
 	// console.log(this.state)
   }
-
+  onChangeVideoD(e) {
+	e.preventDefault()
+	this.setState({videoId: videoIdD})
+	// console.log(this.state)
+  }
   render() {    	
     return (
 
@@ -47,7 +53,7 @@ export default class Videos extends React.Component {
 
 	       	<div className="text-center" style={{marginBottom:'15px', paddingTop:'15px'}}>
 
-		       	<div className="col-sm-4" style={{paddingLeft:'0px', float:'left'}}>
+		       	<div className="col-sm-3 Itens">
 		       		<a href='' onClick={this.onChangeVideo}>
 			       	 	<Item
 			            	nome="meu nome Ed"
@@ -56,7 +62,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 
-		       	<div className="col-sm-4" style={{padding:'0 7px'}}> 
+		       	<div className="col-sm-3 Itens"> 
 		       	 	<a href='' onClick={this.onChangeVideoB}>
 			       	 	<Item
 			            	nome="meu nome 2"
@@ -65,7 +71,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 
-		       	<div className="col-sm-4" style={{paddingRight:'0px', float:'right'}}>
+		       	<div className="col-sm-3 Itens">
 		       	 	<a href='' onClick={this.onChangeVideoC}>
 			       	 	<Item
 			            	nome="meu nome 3"
@@ -73,9 +79,17 @@ export default class Videos extends React.Component {
 			       	 	/>
 		       	 	</a>
 		       	</div>
+		       	<div className="col-sm-3 Itens">
+		       	 	<a href='' onClick={this.onChangeVideoD}>
+			       	 	<Item
+			            	nome="meu nome 3"
+							id={videoIdD}
+			       	 	/>
+		       	 	</a>
+		       	</div>
+
       		</div>
 
-			
 	    </div>
     );
   }

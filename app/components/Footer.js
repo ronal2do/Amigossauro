@@ -8,7 +8,7 @@ class Footer extends React.Component {
       	<div className="pull-left" style={{ paddingTop:'22em' }}>
 
           <Social /> 
-          <p>© 2016 Company, Inc. All Rights Reserved.</p>
+          <p>© 2016 Amigossauro. All Rights Reserved.</p>
         </div>
        
       </footer>

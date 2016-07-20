@@ -1,19 +1,17 @@
 import React from 'react';
 
-class Video extends React.Component {
-  
+export default class Video extends React.Component {
+
   render() {
     return (
 	      <div className="text-center">
-		       	<div className="embed-responsive embed-responsive-16by9" style={{margin:'15px'}}>
+		       	<div className="embed-responsive embed-responsive-16by9">
 				    <iframe 
 				    	className="embed-responsive-item" 
-				    	src={'//www.youtube.com/embed/' + this.props.id}
+				    	src={'//www.youtube.com/embed/' + this.props.videoId}
 				    ></iframe>
 				</div>
 	      </div>
     );
   }
 }
-
-export default (Video);

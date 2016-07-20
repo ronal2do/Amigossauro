@@ -27,7 +27,7 @@ class Header extends React.Component {
   render() {
     const active = { borderBottomColor: '#3f51b5' };
     const rightNav = this.props.token ? (
-      <ul className="nav navbar-nav navbar-right">
+    
         <li className="dropdown">
           <a href="#" data-toggle="dropdown" className="navbar-avatar dropdown-toggle">
             <img src={this.props.user.picture || this.props.user.gravatar}/>
@@ -35,17 +35,23 @@ class Header extends React.Component {
             <i className="caret"></i>
           </a>
           <ul className="dropdown-menu">
-            <li><Link to="/account">My Account</Link></li>
+            <li><Link to="/account">Minha conta</Link></li>
             <li className="divider"></li>
-            <li><a href="#" onClick={this.handleLogout.bind(this)}>Logout</a></li>
+            <li><a href="#" onClick={this.handleLogout.bind(this)}>Sair</a></li>
           </ul>
         </li>
-      </ul>
+  
     ) : (
-      <ul className="nav navbar-nav navbar-right">
-        <li><Link to="/login" activeStyle={active}>Log in</Link></li>
-        <li><Link to="/signup" activeStyle={active}>Sign up</Link></li>
-      </ul>
+     <li className="dropdown">
+        <a href="#" data-toggle="dropdown" className="navbar-avatar dropdown-toggle">
+           logar
+            <i className="caret"></i>
+        </a>
+        <ul className="dropdown-menu">
+          <li><Link to="/login" activeStyle={active}>Acessar</Link></li>
+          <li><Link to="/signup" activeStyle={active}>Registrar</Link></li>
+        </ul>
+     </li>
     );
     return (
       <nav className="navbar navbar-default sticky">
@@ -64,9 +70,10 @@ class Header extends React.Component {
               <ul className="nav navbar-nav">
                 <li><IndexLink to="/" activeStyle={active}>Home</IndexLink></li>
                 <li><Link to="/amizade" activeStyle={active}>Era da Amizade</Link></li>
-                <li><Link to="/contact" activeStyle={active}>Contato</Link></li>
-              </ul>
+                <li><Link to="/contato" activeStyle={active}>Contato</Link></li>
               {rightNav}
+              </ul>
+            
             </div>
           </div>
         </div>

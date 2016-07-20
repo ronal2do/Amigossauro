@@ -10,24 +10,24 @@ class Lista extends React.Component {
       	 <br />
 
        	 <div className="col-sm-4">
-       	 	<Item
-            nome="meu nome"
-				    src="http://img.youtube.com/vi/VVS2tqpXiZ0/default.jpg"
-       	 	/>
+         	 	<Item
+              nome="meu nome"
+  				    id="VVS2tqpXiZ0"
+         	 	/>
        	 </div>
 
        	 <div className="col-sm-4">
-       	 	<Item
-            nome="meu nome 2"
-				    src="http://img.youtube.com/vi/hsfA4kTdltE/default.jpg"
-       	 	/>	
+         	 	<Item
+              nome="meu nome 2"
+  				    id="hsfA4kTdltE"
+         	 	/>	
        	 </div>
 
        	 <div className="col-sm-4">
-       	 	<Item
-            nome="meu nome 3"
-				    src="http://img.youtube.com/vi/c_yomf6U35A/default.jpg"
-       	 	/>
+         	 	<Item
+              nome="meu nome 3"
+  				    id="c_yomf6U35A"
+         	 	/>
        	 </div>
 
       </div>

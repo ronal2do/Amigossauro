@@ -346,7 +346,7 @@ h5{
 
 .Logo img{
     width: 327px;
-    height: 127px;
+    max-width: 100%;
 } 
 
 .Azul{
@@ -394,7 +394,14 @@ h5{
 h1{
   color: $deco;
 }
-
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+          
 .Frase-youtube{
   text-align:center;
 };

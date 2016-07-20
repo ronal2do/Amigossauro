@@ -6053,7 +6053,7 @@ h5 {
 
 .Logo img {
   width: 327px;
-  height: 127px; }
+  max-width: 100%; }
 
 .Azul {
   color: #006ebd; }
@@ -6096,6 +6096,13 @@ h5 {
 
 h1 {
   color: #dc2e27; }
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none; }
+
+.navbar .navbar-collapse {
+  text-align: center; }
 
 .Frase-youtube {
   text-align: center; }

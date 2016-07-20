@@ -4,9 +4,10 @@ class Item extends React.Component {
   render() {
     return (
 		<img
-			src={ this.props.src } 
+			src={'http://img.youtube.com/vi/' + this.props.id + '/default.jpg'}
 			alt={ this.props.nome } 
-			width="100%"/>
+			width="100%"
+		/>
     );
   }
 

@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
  * GET /contact
  */
 exports.contactGet = function(req, res) {
-  res.render('contact', {
+  res.render('contato', {
     title: 'Contact'
   });
 };
@@ -40,6 +40,6 @@ exports.contactPost = function(req, res) {
   };
 
   transporter.sendMail(mailOptions, function(err) {
-    res.send({ msg: 'Thank you! Your feedback has been submitted.' });
+    res.send({ msg: 'Obrigado! Os seus comentários foram submetidas.' });
   });
 };

@@ -38,7 +38,9 @@ class Amizade extends React.Component {
               texto="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nisi, commodi omnis illo ipsum tenetur ullam aut id tempore assumenda dolorum ex repellendus reiciendis quisquam voluptates vero, fuga, libero cum."
               src="http://placehold.it/250x200"
           />
-          <Newsletter />
+        </div>
+        <div className="row">
+          <Newsletter className="col-sm-12" style={{padding:'0px'}}/>
         </div>
       </div>
     );

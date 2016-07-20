@@ -1,76 +1,84 @@
 import React from 'react';
 
-import Video from './Video';
 import Item from './Item';
+import Video from './Video';
 
-const ID = "VadjvlvBDxE";
-
-class Videos extends React.Component {
+  	const videoIdA = "VadjvlvBDxE";
+	const videoIdB = "VVS2tqpXiZ0";
+	const videoIdC = "c_yomf6U35A";
   
+export default class Videos extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      videoId: videoIdA,
-      player: null,
+        videoId: props.initial
     };
 
-	this.onReady = this.onReady.bind(this);
-    this.onChangeVideo = this.onChangeVideo.bind(this);
+    this.onChangeVideo  = this.onChangeVideo.bind(this);
+    this.onChangeVideoB = this.onChangeVideoB.bind(this);
+    this.onChangeVideoC = this.onChangeVideoC.bind(this);
+}
+
+  onChangeVideo(e) {
+	e.preventDefault()
+	this.setState({videoId: videoIdA})
+	// console.log(this.state)
+  }
+  onChangeVideoB(e) {
+	e.preventDefault()
+	this.setState({videoId: videoIdB})
+	// console.log(this.state)
+  }
+  onChangeVideoC(e) {
+	e.preventDefault()
+	this.setState({videoId: videoIdC})
+	// console.log(this.state)
   }
 
-  onChangeVideo() {
-    this.setState({
-      videoId: this.state.videoId === videoIdA ? videoIdB : videoIdA,
-    });
-  }
-
- onReady(event) {
-    console.log(`YouTube Player object for videoId: "${this.state.videoId}" has been saved to state.`); // eslint-disable-line
-    this.setState({
-      player: event.target,
-    });
-  }
-
-  render() {
+  render() {    	
     return (
+
 	    <div className="col-sm-12 text-center Azul">
-	    	<div className="Padding"></div>
-	    	<h2 style={{paddingTop: '40px'}}>Nossos Vídeos </h2>
-	        <Video id={ID} />
-	       	<div className="text-center">
-		      	<br />
 
-		       	<div className="col-sm-4">
-		       	 	<Item
-		       	 		onClick={this.onChangeVideo}
-		            	nome="meu nome"
-						src="http://img.youtube.com/vi/VVS2tqpXiZ0/default.jpg"
-		       	 	/>
+	    	<h2 style={{paddingTop: '40px'}}>Nossos Vídeos</h2>
+	     
+			<Video videoId={this.state.videoId} />
+
+	       	<div className="text-center" style={{marginBottom:'15px', paddingTop:'15px'}}>
+
+		       	<div className="col-sm-4" style={{paddingLeft:'0px', float:'left'}}>
+		       		<a href='' onClick={this.onChangeVideo}>
+			       	 	<Item
+			            	nome="meu nome Ed"
+							id={videoIdA}
+			       	 	/>	
+		       	 	</a>
 		       	</div>
 
-		       	<div className="col-sm-4">
-		       	 	<Item
-		       	 		onClick={this.onChangeVideo}
-		            	nome="meu nome 2"
-						src="http://img.youtube.com/vi/hsfA4kTdltE/default.jpg"
-		       	 	/>	
+		       	<div className="col-sm-4" style={{padding:'0 7px'}}> 
+		       	 	<a href='' onClick={this.onChangeVideoB}>
+			       	 	<Item
+			            	nome="meu nome 2"
+							id={videoIdB}
+			       	 	/>	
+		       	 	</a>
 		       	</div>
 
-		       	<div className="col-sm-4">
-		       	 	<Item
-		       	 		onClick={this.onChangeVideo}
-		            	nome="meu nome 3"
-						src="http://img.youtube.com/vi/c_yomf6U35A/default.jpg"
-		       	 	/>
+		       	<div className="col-sm-4" style={{paddingRight:'0px', float:'right'}}>
+		       	 	<a href='' onClick={this.onChangeVideoC}>
+			       	 	<Item
+			            	nome="meu nome 3"
+							id={videoIdC}
+			       	 	/>
+		       	 	</a>
 		       	</div>
-
-	 			<br />
       		</div>
 
+			
 	    </div>
     );
   }
 }
-
-export default (Videos);
+Videos.propTypes = { initial: React.PropTypes.String };
+Videos.defaultProps = { initial: videoIdA };

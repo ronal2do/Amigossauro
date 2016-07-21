@@ -6122,6 +6122,13 @@ h1 {
   background-image: url(../images/bg.png);
   background-repeat: repeat; }
 
+.navbar-default .navbar-nav > li > a:hover {
+  border-bottom-color: #f88144; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #f88144;
+  background-color: transparent; }
+
 @media only screen and (min-width: 768px) {
   .Itens {
     padding: 0 8px; }

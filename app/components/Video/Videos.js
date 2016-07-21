@@ -7,6 +7,8 @@ import Video from './Video';
 	const videoIdB = "VVS2tqpXiZ0";
 	const videoIdC = "c_yomf6U35A";
 	const videoIdD = "WIksma_8Ka4";
+	const AUTOPLAY = "?autoplay=1";
+
   
 export default class Videos extends React.Component {
   constructor(props) {
@@ -24,22 +26,22 @@ export default class Videos extends React.Component {
 
   onChangeVideo(e) {
 	e.preventDefault()
-	this.setState({videoId: videoIdA})
+	this.setState({videoId: videoIdA + AUTOPLAY})
 	// console.log(this.state)
   }
   onChangeVideoB(e) {
 	e.preventDefault()
-	this.setState({videoId: videoIdB})
+	this.setState({videoId: videoIdB + AUTOPLAY})
 	// console.log(this.state)
   }
   onChangeVideoC(e) {
 	e.preventDefault()
-	this.setState({videoId: videoIdC})
+	this.setState({videoId: videoIdC + AUTOPLAY})
 	// console.log(this.state)
   }
   onChangeVideoD(e) {
 	e.preventDefault()
-	this.setState({videoId: videoIdD})
+	this.setState({videoId: videoIdD + AUTOPLAY})
 	// console.log(this.state)
   }
   render() {    	
@@ -94,5 +96,5 @@ export default class Videos extends React.Component {
     );
   }
 }
-Videos.propTypes = { initial: React.PropTypes.String };
+Videos.propTypes = { initial: React.PropTypes.string };
 Videos.defaultProps = { initial: videoIdA };

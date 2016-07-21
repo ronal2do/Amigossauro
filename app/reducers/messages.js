@@ -7,6 +7,7 @@ export default function messages(state = {}, action) {
     case 'FORGOT_PASSWORD_FAILURE':
     case 'RESET_PASSWORD_FAILURE':
     case 'CONTACT_FORM_FAILURE':
+    case 'NEWSLETTER_FORM_FAILURE':
     case 'OAUTH_FAILURE':
     case 'UNLINK_FAILURE':
     case 'LINK_FAILURE':
@@ -17,6 +18,7 @@ export default function messages(state = {}, action) {
     case 'CHANGE_PASSWORD_SUCCESS':
     case 'RESET_PASSWORD_SUCCESS':
     case 'CONTACT_FORM_SUCCESS':
+    case 'NEWSLETTER_FORM_SUCCESS':
       return {
         success: action.messages
       };

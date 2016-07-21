@@ -3,11 +3,15 @@ import { connect } from 'react-redux'
 import { submitContactForm } from '../actions/contact';
 import Messages from './Messages';
 import Social from './Social';
+import Submit from './commons/Submit';
 
 class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = { name: '', email: '', message: '' };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
@@ -17,6 +21,7 @@ class Contact extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.dispatch(submitContactForm(this.state.name, this.state.email, this.state.message));
+    this.setState = { name: '', email: '', message: '' };
   }
 
   render() {
@@ -30,28 +35,28 @@ class Contact extends React.Component {
             <h1>Contato</h1>
             <div className="panel-body"> 
                 <Messages messages={this.props.messages}/>
-                    <form onSubmit={this.handleSubmit.bind(this)} className="form-horizontal">
+                    <form onSubmit={this.handleSubmit} className="form-horizontal">
                       <div className="form-group">
                         <label htmlFor="name" className="col-sm-2">Name</label>
                         <div className="col-sm-8">
-                          <input type="text" name="name" id="name" className="form-control" value={this.state.name} onChange={this.handleChange.bind(this)} autoFocus/>
+                          <input type="text" name="name" id="name" className="form-control" value={this.state.name} onChange={this.handleChange} autoFocus/>
                         </div>
                       </div>
                       <div className="form-group">
                         <label htmlFor="email" className="col-sm-2">Email</label>
                         <div className="col-sm-8">
-                          <input type="email" name="email" id="email" className="form-control" value={this.state.email} onChange={this.handleChange.bind(this)}/>
+                          <input type="email" name="email" id="email" className="form-control" value={this.state.email} onChange={this.handleChange}/>
                         </div>
                       </div>
                       <div className="form-group">
                         <label htmlFor="message" className="col-sm-2">Body</label>
                         <div className="col-sm-8">
-                          <textarea name="message" id="message" rows="7" className="form-control" value={this.state.message} onChange={this.handleChange.bind(this)}></textarea>
+                          <textarea name="message" id="message" rows="7" className="form-control" value={this.state.message} onChange={this.handleChange}></textarea>
                         </div>
                       </div>
                       <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-8">
-                          <button type="submit" className="btn btn-success">Send</button>
+                           <Submit texto="Enviar" />
                         </div>
                       </div>
                     </form>

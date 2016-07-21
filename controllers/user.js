@@ -317,7 +317,7 @@ exports.authFacebook = function(req, res) {
           user = req.user;
           user.name = user.name || profile.name;
           user.gender = user.gender || profile.gender;
-          user.picture = user.picture || 'https://graph.facebook.com/' + profile.id + '/picture?type=large';
+          user.picture = user.picture || 'https://graph.facebook.com/' + profile.id + '/picture?type=square';
           user.facebook = profile.id;
           user.save(function() {
             res.send({ token: generateToken(user), user: user });
@@ -338,7 +338,7 @@ exports.authFacebook = function(req, res) {
               email: profile.email,
               gender: profile.gender,
               location: profile.location && profile.location.name,
-              picture: 'https://graph.facebook.com/' + profile.id + '/picture?type=large',
+              picture: 'https://graph.facebook.com/' + profile.id + '/picture?type=square',
               facebook: profile.id
             });
             user.save(function(err) {

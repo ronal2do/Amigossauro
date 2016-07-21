@@ -12,7 +12,7 @@ var transporter = nodemailer.createTransport({
  */
 exports.contactGet = function(req, res) {
   res.render('contato', {
-    title: 'Contact'
+    title: 'Contato'
   });
 };
 
@@ -35,11 +35,11 @@ exports.contactPost = function(req, res) {
   var mailOptions = {
     from: req.body.name + ' ' + '<'+ req.body.email + '>',
     to: 'ronal2do@gmail.com',
-    subject: '✔ Contact Form | Mega Boilerplate',
+    subject: 'Contato do site Amigossauro',
     text: req.body.message
   };
 
   transporter.sendMail(mailOptions, function(err) {
-    res.send({ msg: 'Obrigado! Os seus comentários foram submetidas.' });
+    res.send({ msg: 'Obrigado! A sua mensagem foi enviada.' });
   });
 };

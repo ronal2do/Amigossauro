@@ -1,4 +1,4 @@
-export function submitNewsletterForm(name, email, message) {
+export function submitNewsletterForm(nome, email, estado, cidade) {
   return (dispatch) => {
     dispatch({
       type: 'CLEAR_MESSAGES'
@@ -7,22 +7,23 @@ export function submitNewsletterForm(name, email, message) {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name: name,
+        nome: nome,
         email: email,
-        message: message
+        estado: estado,
+        cidade: cidade
       })
     }).then((response) => {
       if (response.ok) {
         return response.json().then((json) => {
           dispatch({
-            type: 'CONTACT_FORM_SUCCESS',
+            type: 'NEWSLETTER_FORM_SUCCESS',
             messages: [json]
           });
         });
       } else {
         return response.json().then((json) => {
           dispatch({
-            type: 'CONTACT_FORM_FAILURE',
+            type: 'NEWSLETTER_FORM_FAILURE',
             messages: Array.isArray(json) ? json : [json]
           });
         });

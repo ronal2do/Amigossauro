@@ -27,11 +27,13 @@ require('babel-core/register');
 require('babel-polyfill');
 
 // Models
-var User = require('./models/User');
+var User       = require('./models/User');
+var Newsletter = require('./models/Newsletter');
 
 // Controllers
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
+var newsletterController = require('./controllers/newsletter');
 
 // React and Server-Side Rendering
 var routes = require('./app/routes');
@@ -104,6 +106,7 @@ if (app.get('env') === 'development') {
 }
 
 app.post('/contact', contactController.contactPost);
+app.post('/newsletter', newsletterController.newsletterPost);
 app.put('/account', userController.ensureAuthenticated, userController.accountPut);
 app.delete('/account', userController.ensureAuthenticated, userController.accountDelete);
 app.post('/signup', userController.signupPost);

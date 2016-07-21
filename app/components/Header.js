@@ -2,6 +2,7 @@ import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import { connect } from 'react-redux'
 import { logout } from '../actions/auth';
+import Divisor from './commons/Divisor';
 
 class Header extends React.Component {
   
@@ -31,7 +32,7 @@ class Header extends React.Component {
         <li className="dropdown">
           <a href="#" data-toggle="dropdown" className="navbar-avatar dropdown-toggle">
             <img src={this.props.user.picture || this.props.user.gravatar}/>
-            {' '}{this.props.user.name || this.props.user.email || this.props.user.id}{' '}
+             {' '}{this.props.user.name || this.props.user.email || this.props.user.id}{' '}
             <i className="caret"></i>
           </a>
           <ul className="dropdown-menu">
@@ -49,6 +50,7 @@ class Header extends React.Component {
         </a>
         <ul className="dropdown-menu">
           <li><Link to="/login" activeStyle={active}>Acessar</Link></li>
+          <li className="divider"></li>
           <li><Link to="/signup" activeStyle={active}>Registrar</Link></li>
         </ul>
      </li>
@@ -69,11 +71,15 @@ class Header extends React.Component {
             <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
                 <li><IndexLink to="/" activeStyle={active}>Home</IndexLink></li>
+                <Divisor />
                 <li><Link to="/amizade" activeStyle={active}>Era da Amizade</Link></li>
+                <Divisor />
                 <li><Link to="/downloads" activeStyle={active}>Downloads</Link></li>
+                <Divisor />
                 <li><Link to="/blog" activeStyle={active}>Blog</Link></li>
+                <Divisor />
                 <li><Link to="/contato" activeStyle={active}>Contato</Link></li>
-              {rightNav}
+                
               </ul>
             
             </div>

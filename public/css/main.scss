@@ -428,6 +428,10 @@ h1{
     color: #f88144;
     background-color: transparent;
 }
+    .Divisor{
+      visibility: hidden;
+      padding: 0;
+    }
 @media only screen and (min-width: 768px) {
     .Itens {
       padding: 0 8px;
@@ -437,6 +441,11 @@ h1{
     }
     .Itens:last-child {
          padding-right: 0px;
+    }
+    .Divisor{
+      visibility: visible;
+      padding: 20px 10px 10px 10px; 
+      color:#ffd403;
     }
 }
 

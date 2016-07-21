@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import Messages from '../Messages';
 import { submitNewsletterForm } from '../../actions/newsletter';
+import Messages from '../Messages';
 
 import Submit from './../commons/Submit';
 
@@ -28,44 +28,45 @@ class Form extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade));
+    console.log("Enviado");
   }
 
   render() {
     return (
           <div className="padding-top">
             <Messages messages={this.props.messages}/>
-              <form autocomplete="off" className="form-horizontal" onSubmit={this.handleSubmit.bind(this)}>
+              <form className="form-horizontal" onSubmit={this.handleSubmit.bind(this)}>
                 <div className="form-group">
                   <div className="col-sm-12">
                     <input 
-                        type="text" 
-                        name="nome" 
-                        id="nome" 
-                        className="form-control" 
-                        placeholder="Nome:" 
-                        autocomplete="off"
-                        value={this.state.nome} 
-                        onChange={this.handleChange.bind(this)}
+                      type="text"
+                      name="nome"
+                      className="form-control" 
+                      id="nome"
+                      valor={"nome"}
+                      placeholder={"Nome: "}
+                      value={this.state.nome} 
+                      onChange={this.handleChange.bind(this)}
                     />
                   </div>
                 </div>
                 <div className="form-group">
                   <div className="col-sm-12">
                     <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        className="form-control" 
-                        placeholder="E-mail:" 
-                        autocomplete="off"
-                        value={this.state.email} 
-                        onChange={this.handleChange.bind(this)}
+                      type="email"
+                      name="email"
+                      className="form-control" 
+                      id="email"
+                      valor={"email"}
+                      placeholder={"E-mail: "}
+                      value={this.state.email} 
+                      onChange={this.handleChange.bind(this)}
                     />
                   </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-6">
-                      <select name="estado" id="estado" className="form-control" autocomplete="off"
+                      <select name="estado" id="estado" className="form-control"
                         onChange={this.handleChange.bind(this)}></select>
                     </div>
                     <div className="col-sm-6">

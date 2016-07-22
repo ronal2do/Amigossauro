@@ -1,9 +1,11 @@
 import React from 'react';
 import { IndexRoute, Route } from 'react-router';
 import App from './components/App';
+import Site from './components/Site';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Amizade from './components/Amizade';
+import Teste from './components/Dashboard/Teste';
 import Downloads from './components/Downloads/';
 import Dashboard from './components/Dashboard/';
 import Blog from './components/Blog/';
@@ -42,7 +44,9 @@ export default function getRoutes(store) {
       <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
       <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
-      <Route path="/dashboard" component={Dashboard} onLeave={clearMessages}/>
+      <Route path="/dashboard" component={Dashboard} >
+
+      </Route>
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );

@@ -16,7 +16,7 @@ exports.newsletterPost = function(req, res) {
   const newsletter = new Newsletter(body);
 
   newsletter.save((err, data) => {
-    callback(err, data, res);
+    res.send({ msg: 'Obrigado! Você foi cadastrado em nossa lista de Novidades.' });
   });
 
 };

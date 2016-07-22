@@ -21,11 +21,7 @@ class Downloads extends React.Component {
         <div className="row">
           <Box 
             titulo="Downloads"
-            texto={[
-                    "This ", <strong>negrito</strong>, " working! " , <br /> , 
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, repellendus adipisci dolore officia aut voluptatum ullam. Accusamus ducimus voluptatem dolor et autem illo veniam culpa hic repudiandae, iusto nulla quo."
-                    ]}
-            src="deco"
+            src="home"
           />
           <Card 
               titulo="Paper Toy"

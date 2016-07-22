@@ -1,5 +1,33 @@
 @charset "UTF-8";
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,300,600,700,800");
+@font-face {
+  font-family: 'DaftBrush';
+  src: url("../fonts/daftbrush/DaftBrush.eot");
+  src: url("../fonts/daftbrush/DaftBrush.woff2") format("woff2"), url("../fonts/daftbrush/DaftBrush.woff") format("woff"), url("../fonts/daftbrush/DaftBrush.ttf") format("truetype"), url("../fonts/daftbrush/DaftBrush.svg#DaftBrush") format("svg"), url("../fonts/daftbrush/DaftBrush.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Runcible';
+  src: url("../fonts/runcible/Runcible.eot");
+  src: url("../fonts/runcible/Runcible.woff2") format("woff2"), url("../fonts/runcible/Runcible.woff") format("woff"), url("../fonts/runcible/Runcible.ttf") format("truetype"), url("../fonts/runcible/Runcible.svg#Runcible") format("svg"), url("../fonts/runcible/Runcible.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'AvenirNext-Medium';
+  src: url("../fonts/avenir/AvenirNext-Medium.eot");
+  src: url("../fonts/avenir/AvenirNext-Medium.woff2") format("woff2"), url("../fonts/avenir/AvenirNext-Medium.woff") format("woff"), url("../fonts/avenir/AvenirNext-Medium.ttf") format("truetype"), url("../fonts/avenir/AvenirNext-Medium.svg#AvenirNext-Medium") format("svg"), url("../fonts/avenir/AvenirNext-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'AvenirNext-Bold';
+  src: url("../fonts/avenir/AvenirNext-Bold.eot");
+  src: url("../fonts/avenir/AvenirNext-Bold.woff2") format("woff2"), url("../fonts/avenir/AvenirNext-Bold.woff") format("woff"), url("../fonts/avenir/AvenirNext-Bold.ttf") format("truetype"), url("../fonts/avenir/AvenirNext-Bold.svg#AvenirNext-Bold") format("svg"), url("../fonts/avenir/AvenirNext-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1056,7 +1084,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.57143;
   color: #333333;
@@ -5188,7 +5216,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5301,7 +5329,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5830,8 +5858,7 @@ footer {
   position: absolute;
   display: flex;
   width: 100%;
-  height: 572px;
-  margin: 37px 0 0;
+  height: 672px;
   padding: 30px;
   background-image: url(../images/footer.png);
   background-position: center top;
@@ -5848,7 +5875,8 @@ footer {
   border-width: 0 0 0 3px; }
 
 .navbar-default .navbar-nav > li > a {
-  border-bottom: 3px solid transparent;
+  font-family: 'DaftBrush';
+  border-bottom: none;
   padding-bottom: 14.5px;
   transition: all 0.25s; }
   .navbar-default .navbar-nav > li > a:hover {
@@ -5999,7 +6027,12 @@ h2,
 h3,
 h4,
 h5 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Runcible';
+  font-weight: 100; }
+
+h1 {
+  font-family: 'DaftBrush'; }
 
 .Dim {
   background-color: #c7f3f4;
@@ -6013,14 +6046,14 @@ h5 {
   background-color: #ffe7ea;
   color: #db2e2a; }
 
-.Titulo-Dim {
-  color: #004771; }
-
-.Titulo-Dana {
-  color: #bf4d93; }
-
-.Titulo-Deco {
-  color: #db2e2a; }
+.Titulo {
+  font-size: 2.5em; }
+  .Titulo-Dim {
+    color: #004771; }
+  .Titulo-Dana {
+    color: #bf4d93; }
+  .Titulo-Deco {
+    color: #db2e2a; }
 
 .form-control:focus {
   border-color: transparent;
@@ -6105,8 +6138,9 @@ h1 {
   color: #db2e2a; }
 
 .navbar-default .navbar-nav > li > a {
-  font-size: 18px;
-  color: #fff; }
+  font-size: 28px;
+  color: #fff;
+  font-weight: 100; }
 
 .navbar .navbar-nav {
   display: inline-block;
@@ -6116,7 +6150,10 @@ h1 {
   text-align: center; }
 
 .Frase-youtube {
-  text-align: center; }
+  text-align: center;
+  font-family: 'DaftBrush';
+  color: #db2e2a;
+  font-size: 1.4em; }
 
 .Fundo {
   background-image: url(../images/bg.png);
@@ -6130,17 +6167,27 @@ h1 {
   background-color: transparent; }
 
 .Divisor {
-  visibility: hidden;
-  padding: 0; }
+  visibility: hidden; }
+
+.st0 {
+  fill: #FECE06; }
+
+.st1 {
+  fill: #db2e2a; }
+
+.Vermelho {
+  color: #db2e2a; }
+
+.Newsletter-titulo {
+  text-transform: none;
+  font-size: 2.5em;
+  color: #0270ab; }
+
+strong {
+  font-family: 'AvenirNext-Bold'; }
 
 @media only screen and (min-width: 768px) {
   .Itens {
     padding: 0 8px; }
-  .Itens:first-child {
-    padding-left: 0px; }
-  .Itens:last-child {
-    padding-right: 0px; }
   .Divisor {
-    visibility: visible;
-    padding: 20px 10px 10px 10px;
-    color: #ffd403; } }
+    visibility: visible; } }

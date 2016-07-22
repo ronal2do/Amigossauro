@@ -17,12 +17,12 @@ class Amizade extends React.Component {
         <div className="row">
           <Box 
             titulo="Era da Amizade"
-            texto={[
-                    "This ", <strong>negrito</strong>, " working! " , <br /> , 
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, repellendus adipisci dolore officia aut voluptatum ullam. Accusamus ducimus voluptatem dolor et autem illo veniam culpa hic repudiandae, iusto nulla quo."
-                    ]}
-            src="dim"
-          />
+            src="home"
+          >
+            <p className="Azul">De três ovos perdidos em uma floresta mágica, nasceram três dinossauros: o <strong>Dim</strong>, a <strong>Dana</strong> e o <strong>Deco</strong>.
+            <br/>Juntos, eles descobriram o poder da amizade e hoje formam um grupo muito divertido: o <strong>Amigossauro</strong>.
+            <br/>Chame todas as crianças para fazer parte dessa turma, onde a imaginação não tem limites.</p>
+          </Box>
           <Card 
               titulo="Dim"
               texto="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quos cupiditate facilis magni laboriosam adipisci voluptates laborum deserunt distinctio modi incidunt ratione nam ad, dolores ducimus vel libero sit, error."

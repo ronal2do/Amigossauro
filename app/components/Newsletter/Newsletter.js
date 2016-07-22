@@ -7,7 +7,7 @@ class Newsletter extends React.Component {
     return (
         <div className="Newsletter" style={{padding:'15px 0'}}>
             <div className="col-sm-3">
-       			    <h3>Inscreva-se em nossa newsletter</h3>
+       			    <h3 className="Newsletter-titulo">Inscreva-se em nossa newsletter</h3>
             </div>
             <div className="col-sm-9">
             	<br/>

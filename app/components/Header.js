@@ -26,7 +26,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const active = { borderBottomColor: '#ffd403', color:'#ffd403' };
+    const active = { color:'#ffd403' };
     const rightNav = this.props.token ? (
     
         <li className="dropdown">

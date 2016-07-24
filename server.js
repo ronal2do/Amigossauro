@@ -106,6 +106,7 @@ if (app.get('env') === 'development') {
 }
 
 app.post('/contact', contactController.contactPost);
+app.get('/newsletter', newsletterController.newsletterGet);
 app.post('/newsletter', newsletterController.newsletterPost);
 app.put('/account', userController.ensureAuthenticated, userController.accountPut);
 app.delete('/account', userController.ensureAuthenticated, userController.accountDelete);

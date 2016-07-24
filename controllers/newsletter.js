@@ -20,3 +20,27 @@ exports.newsletterPost = function(req, res) {
   });
 
 };
+
+/**
+ * GET /newsletter
+ */
+exports.newsletterGet = function(req, res) {
+
+   Newsletter.find((err, data) => {
+    if (err) return console.log("ERRO: ", err);
+  	return res.json(data);
+  });
+
+};
+
+/**
+ * GET /newsletter/:id
+ */
+exports.newsletterGetId = function(req, res) {
+
+   Newsletter.findById((err, data) => {
+    res.send({id:req.params.id, name: "The Name", description: "description"});
+  	return res.json(data);
+  });
+
+};

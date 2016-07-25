@@ -13,12 +13,14 @@ class Form extends React.Component {
           email: '', 
           estado: '', 
           cidade: '', 
-          valido: '' 
+          valido: '', 
+          nvalido: '' 
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.validarEmailTeste = this.validarEmailTeste.bind(this);
+    this.validarEmail = this.validarEmail.bind(this);
+    this.validarNome = this.validarNome.bind(this);
   }
 
   handleChange(event) {
@@ -40,15 +42,14 @@ class Form extends React.Component {
     this.setState({ nome: '', email: '', estado: '', cidade: '' });
   }
 
-  validarEmailTeste(event){
-      const validar = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (validar.test(event.target.value) == false  || event.target.value == ''){
+  validarNome(event){
+      if (event.target.value == ''){
           console.log(event.target.value);
           console.log('inválido');
-          this.setState({ valido: 'error'});
+          this.setState({ nvalido: 'error'});
       } else {
         console.log('valido');
-        this.setState({ valido: ''});
+        this.setState({ nvalido: ''});
       }
   }
 
@@ -62,7 +63,6 @@ class Form extends React.Component {
         console.log('valido');
         this.setState({ valido: ''});
       }
-      return true;
   }
 
   render() {
@@ -77,13 +77,15 @@ class Form extends React.Component {
                       type="text"
                       name="nome"
                       ref="nome"
-                      className="form-control" 
+                      className={'form-control ' + this.state.nvalido}
                       id="nome"
+                      onBlur={this.validarNome}
                       valor={"nome"}
                       placeholder={"Nome: "}
                       value={this.state.nome} 
                       onChange={this.handleChange}
                     />
+                    <small className={'Span' + this.state.nvalido}>Não pode estar em branco</small>
                   </div>
                 </div>
                 <div className={'form-group'}>
@@ -94,7 +96,7 @@ class Form extends React.Component {
                       ref="email"
                       className={'form-control ' + this.state.valido}
                       id="email"
-                      onBlur={this.validarEmailTeste}
+                      onBlur={this.validarEmail}
                       valor={"email"}
                       placeholder={"E-mail: "}
                       value={this.state.email} 

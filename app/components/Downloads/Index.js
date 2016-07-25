@@ -8,6 +8,7 @@ import Social from '../Social';
 import Box from '../Box';
 import Card from './Cards';
 import Newsletter from '../Newsletter/Newsletter';
+import Baixar from '../Account/Baixar';
 
 
 
@@ -23,12 +24,38 @@ class Downloads extends React.Component {
             titulo="Downloads"
             src="home"
           />
+
           <Card 
-              titulo="Paper Toy"
-              texto="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              titulo="Jogos"
+              texto="Lorem ipsum dolor sit amet."
               src="dana"
 
-          /> 
+          >
+           <Baixar file="Cartão"/>
+          </Card>
+          <Card 
+              titulo="Para Colorir"
+              texto="Lorem ipsum dolor sit amet."
+              src="dana"
+            >
+              <Baixar file="Cartão"/>
+          </Card>
+           <Card 
+              titulo="Letras e Cifras"
+              texto="Lorem ipsum dolor sit amet."
+              src="dana"
+
+          >
+           <Baixar file="Cartão"/>
+          </Card>
+           <Card 
+              titulo="Paper Toys"
+              texto="Lorem ipsum dolor sit amet."
+              src="dana"
+
+          >
+           <Baixar file="Cartão"/>
+          </Card>
         </div>
 
         <div className="row">

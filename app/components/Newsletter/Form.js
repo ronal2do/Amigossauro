@@ -10,6 +10,9 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = { nome: '', email: '', estado: '', cidade: '' };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -25,9 +28,13 @@ class Form extends React.Component {
         })
   }
 
+  reset(){
+    this.setState = { nome: '', email: '', estado: '', cidade: '' };
+  }
+
   handleSubmit(event) {
     event.preventDefault();
-    this.props.dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade));
+    this.props.dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade)).reset();
     console.log("Enviado");
   }
 
@@ -35,7 +42,7 @@ class Form extends React.Component {
     return (
           <div className="padding-top">
             <Messages messages={this.props.messages}/>
-              <form className="form-horizontal" onSubmit={this.handleSubmit.bind(this)}>
+              <form className="form-horizontal" onSubmit={this.handleSubmit}>
                 <div className="form-group">
                   <div className="col-sm-12">
                     <input 
@@ -46,7 +53,7 @@ class Form extends React.Component {
                       valor={"nome"}
                       placeholder={"Nome: "}
                       value={this.state.nome} 
-                      onChange={this.handleChange.bind(this)}
+                      onChange={this.handleChange}
                     />
                   </div>
                 </div>
@@ -60,18 +67,18 @@ class Form extends React.Component {
                       valor={"email"}
                       placeholder={"E-mail: "}
                       value={this.state.email} 
-                      onChange={this.handleChange.bind(this)}
+                      onChange={this.handleChange}
                     />
                   </div>
                 </div>
                 <div className="form-group">
                     <div className="col-sm-6">
                       <select name="estado" id="estado" className="form-control"
-                        onChange={this.handleChange.bind(this)}></select>
+                        onChange={this.handleChange}></select>
                     </div>
                     <div className="col-sm-6">
                       <select name="cidade" id="cidade" className="form-control" 
-                        onChange={this.handleChange.bind(this)}></select>
+                        onChange={this.handleChange}></select>
                     </div>
                 </div>
                 <div className="form-group">

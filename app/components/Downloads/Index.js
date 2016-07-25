@@ -23,22 +23,22 @@ class Downloads extends React.Component {
           <Box 
             titulo="Downloads"
             src="home"
-          />
-
+          ><p className="Azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque! </p></Box>
+         </div>
+          <div className="row">
           <Card 
               titulo="Jogos"
               texto="Lorem ipsum dolor sit amet."
               src="dana"
-
           >
-           <Baixar file="Cartão"/>
+              <Baixar file="1"/>
           </Card>
           <Card 
               titulo="Para Colorir"
               texto="Lorem ipsum dolor sit amet."
               src="dana"
             >
-              <Baixar file="Cartão"/>
+              <Baixar file="1"/>
           </Card>
            <Card 
               titulo="Letras e Cifras"
@@ -46,7 +46,7 @@ class Downloads extends React.Component {
               src="dana"
 
           >
-           <Baixar file="Cartão"/>
+           <Baixar file="1"/>
           </Card>
            <Card 
               titulo="Paper Toys"
@@ -54,7 +54,7 @@ class Downloads extends React.Component {
               src="dana"
 
           >
-           <Baixar file="Cartão"/>
+           <Baixar file="1"/>
           </Card>
         </div>
 

@@ -16,17 +16,21 @@ class Baixar extends React.Component {
     this.props.dispatch(facebookLogin())
   }
 
+  baixar(event){
+    event.preventDefault();
+    console.log('baixando...')
+  }
+
   render() {
     const baixar = this.props.token ? (
       <p><br />
-        <button className="btn btn-newsletter pull-right" file={this.props.file} >
+        <a className="btn btn-newsletter pull-right" href={'download/' + this.props.file }>
             <FontAwesome
               className='fa-fw'
               name='download'
-              size='1x'
             />
             Baixar
-            </button>
+            </a>
       </p>
     ) : (
        <button onClick={this.handleFacebook} className="btn btn-facebook">Baixar via Facebook</button>

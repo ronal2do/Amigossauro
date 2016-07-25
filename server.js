@@ -34,6 +34,7 @@ var Newsletter = require('./models/Newsletter');
 var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 var newsletterController = require('./controllers/newsletter');
+var downloadController = require('./controllers/download');
 
 // React and Server-Side Rendering
 var routes = require('./app/routes');
@@ -107,6 +108,7 @@ if (app.get('env') === 'development') {
 
 app.post('/contact', contactController.contactPost);
 app.get('/newsletter', newsletterController.newsletterGet);
+app.get('/download/1', downloadController.downloadGet);
 app.post('/newsletter', newsletterController.newsletterPost);
 app.put('/account', userController.ensureAuthenticated, userController.accountPut);
 app.delete('/account', userController.ensureAuthenticated, userController.accountDelete);

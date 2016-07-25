@@ -4,6 +4,7 @@
   "description": "My app description",
   "scripts": {
     "build": "webpack --display-error-details",
+    "deploy": "npm test && git push heroku master",
     "postinstall": "npm run build",
     "start": "node server.js",
     "test": "npm run test:client && npm run test:server",

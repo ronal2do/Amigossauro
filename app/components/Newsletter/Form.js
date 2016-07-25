@@ -2,17 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { submitNewsletterForm } from '../../actions/newsletter';
 import Messages from '../Messages';
-
 import Submit from './../commons/Submit';
 
 class Form extends React.Component {
   
   constructor(props) {
     super(props);
-    this.state = { nome: '', email: '', estado: '', cidade: '' };
+    this.state = { 
+          nome: '', 
+          email: '', 
+          estado: '', 
+          cidade: '', 
+          valido: '' 
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.validarEmailTeste = this.validarEmailTeste.bind(this);
   }
 
   handleChange(event) {
@@ -28,17 +34,39 @@ class Form extends React.Component {
         })
   }
 
-  reset(){
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade));
     this.setState({ nome: '', email: '', estado: '', cidade: '' });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    this.props.dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade)).reset();
-    console.log("Enviado");
+  validarEmailTeste(event){
+      const validar = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (validar.test(event.target.value) == false  || event.target.value == ''){
+          console.log(event.target.value);
+          console.log('inválido');
+          this.setState({ valido: 'error'});
+      } else {
+        console.log('valido');
+        this.setState({ valido: ''});
+      }
+  }
+
+  validarEmail(value){
+      const validar = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (validar.test(event.target.value) == false  || event.target.value == ''){
+          console.log(event.target.value);
+          console.log('inválido');
+          this.setState({ valido: 'error'});
+      } else {
+        console.log('valido');
+        this.setState({ valido: ''});
+      }
+      return true;
   }
 
   render() {
+
     return (
           <div className="padding-top">
             <Messages messages={this.props.messages}/>
@@ -48,6 +76,7 @@ class Form extends React.Component {
                     <input 
                       type="text"
                       name="nome"
+                      ref="nome"
                       className="form-control" 
                       id="nome"
                       valor={"nome"}
@@ -57,18 +86,21 @@ class Form extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="form-group">
+                <div className={'form-group'}>
                   <div className="col-sm-12">
                     <input 
                       type="email"
                       name="email"
-                      className="form-control" 
+                      ref="email"
+                      className={'form-control ' + this.state.valido}
                       id="email"
+                      onBlur={this.validarEmailTeste}
                       valor={"email"}
                       placeholder={"E-mail: "}
                       value={this.state.email} 
                       onChange={this.handleChange}
                     />
+                    <small className={'Span' + this.state.valido}>Não é um e-mail válido!</small>
                   </div>
                 </div>
                 <div className="form-group">

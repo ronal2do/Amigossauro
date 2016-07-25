@@ -20,10 +20,10 @@ exports.contactGet = function(req, res) {
  * POST /contact
  */
 exports.contactPost = function(req, res) {
-  req.assert('name', 'Name cannot be blank').notEmpty();
-  req.assert('email', 'Email is not valid').isEmail();
-  req.assert('email', 'Email cannot be blank').notEmpty();
-  req.assert('message', 'Message cannot be blank').notEmpty();
+  req.assert('name', 'Nome não pode estar em branco').notEmpty();
+  req.assert('email', 'Email não é válido').isEmail();
+  req.assert('email', 'Email não pode estar em branco').notEmpty();
+  req.assert('message', 'Mensagem não pode estar em branco').notEmpty();
   req.sanitize('email').normalizeEmail({ remove_dots: false });
 
   var errors = req.validationErrors();

@@ -453,6 +453,20 @@ h1{
 strong{
   font-family: 'AvenirNext-Bold';
 }
+.error{
+    background-color: #f4c7ee;
+    box-shadow: 0 3px 0px #ab0202, inset 0 1px 15px rgba(150, 160, 175, 0.05);
+}
+.Span{
+  display: none;
+}
+.Spanerror{
+    display: block;
+    padding-top: 6px;
+    padding-left: 10px;
+    margin-bottom: -8px;
+    color: #ab0202;
+}
 @media only screen and (min-width: 768px) {
     .Itens {
       padding: 0 8px;

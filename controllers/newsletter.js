@@ -11,6 +11,16 @@ const callback = function (err, data, res) {
  * POST /newsletter
  */
 exports.newsletterPost = function(req, res) {
+  req.assert('nome', 'Nome não pode estar em branco').notEmpty();
+  req.assert('email', 'Email não é válido').isEmail();
+  req.assert('email', 'Email não pode estar em branco').notEmpty();
+  req.sanitize('email').normalizeEmail({ remove_dots: false });
+
+  const errors = req.validationErrors();
+
+  if (errors) {
+    return res.status(400).send(errors);
+  }
 
   const body = req.body;
   const newsletter = new Newsletter(body);

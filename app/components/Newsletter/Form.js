@@ -29,7 +29,7 @@ class Form extends React.Component {
   }
 
   reset(){
-    this.setState = { nome: '', email: '', estado: '', cidade: '' };
+    this.setState({ nome: '', email: '', estado: '', cidade: '' });
   }
 
   handleSubmit(event) {

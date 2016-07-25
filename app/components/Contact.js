@@ -4,6 +4,7 @@ import { submitContactForm } from '../actions/contact';
 import Messages from './Messages';
 import Social from './Social';
 import Submit from './commons/Submit';
+import Box from './Box';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -21,37 +22,45 @@ class Contact extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.dispatch(submitContactForm(this.state.name, this.state.email, this.state.message));
-    this.setState = { name: '', email: '', message: '' };
+    this.setState({ name: '', email: '', message: '' });
+  }
+
+  clearInput() {
+    this.setState({ name: '', email: '', message: '' });
   }
 
   render() {
     return (
       <div className="container">
-        <div className="pull-right"> 
-          <Social />
-        </div>
+          <div className="pull-right"> 
+            <Social />
+          </div>
+          <div className="row">
+             <Box 
+              titulo="Contato"
+              src="home"
+            />
+          </div>
           <div className="col-sm-12">
-            <div className="Padding-top"></div>
-            <h1>Contato</h1>
-            <div className="panel-body"> 
+              <div className="panel-body"> 
                 <Messages messages={this.props.messages}/>
                     <form onSubmit={this.handleSubmit} className="form-horizontal">
                       <div className="form-group">
-                        <label htmlFor="name" className="col-sm-2">Name</label>
+                        <label htmlFor="name" className="col-sm-2">Nome</label>
                         <div className="col-sm-8">
-                          <input type="text" name="name" id="name" className="form-control" value={this.state.name} onChange={this.handleChange} autoFocus/>
+                          <input type="text" name="name" ref="name" id="name" className="form-control" value={this.state.name} onChange={this.handleChange} autoFocus/>
                         </div>
                       </div>
                       <div className="form-group">
                         <label htmlFor="email" className="col-sm-2">Email</label>
                         <div className="col-sm-8">
-                          <input type="email" name="email" id="email" className="form-control" value={this.state.email} onChange={this.handleChange}/>
+                          <input type="email" name="email" ref="email" id="email" className="form-control" value={this.state.email} onChange={this.handleChange}/>
                         </div>
                       </div>
                       <div className="form-group">
-                        <label htmlFor="message" className="col-sm-2">Body</label>
+                        <label htmlFor="message" className="col-sm-2">Mensagem</label>
                         <div className="col-sm-8">
-                          <textarea name="message" id="message" rows="7" className="form-control" value={this.state.message} onChange={this.handleChange}></textarea>
+                          <textarea name="message" ref="message" id="message" rows="7" className="form-control" value={this.state.message} onChange={this.handleChange}></textarea>
                         </div>
                       </div>
                       <div className="form-group">
@@ -60,10 +69,10 @@ class Contact extends React.Component {
                         </div>
                       </div>
                     </form>
-                </div>
+              </div>
           </div>
    
-       </div>
+      </div>
 
     );
   }

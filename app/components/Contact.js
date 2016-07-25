@@ -36,10 +36,12 @@ class Contact extends React.Component {
             <Social />
           </div>
           <div className="row">
-             <Box 
-              titulo="Contato"
-              src="home"
-            />
+              <Box 
+                  titulo="Contato"
+                  src="home"
+              >
+                  <p className="Azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque!</p>
+              </Box>
           </div>
           <div className="col-sm-12">
               <div className="panel-body"> 

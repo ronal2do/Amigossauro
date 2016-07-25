@@ -6,9 +6,8 @@ import { logout } from '../../actions/auth';
 
 import Social from '../Social';
 import Box from '../Box';
-import Card from './Cards';
+import CardsGrid from './CardsGrid';
 import Newsletter from '../Newsletter/Newsletter';
-import Baixar from '../Account/Baixar';
 
 
 
@@ -23,45 +22,13 @@ class Downloads extends React.Component {
           <Box 
             titulo="Downloads"
             src="home"
-          ><p className="Azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque! </p></Box>
-         </div>
-          <div className="row">
-          <Card 
-              titulo="Jogos"
-              texto="Lorem ipsum dolor sit amet."
-              src="dana"
           >
-              <Baixar file="1"/>
-          </Card>
-          <Card 
-              titulo="Para Colorir"
-              texto="Lorem ipsum dolor sit amet."
-              src="dana"
-            >
-              <Baixar file="1"/>
-          </Card>
-           <Card 
-              titulo="Letras e Cifras"
-              texto="Lorem ipsum dolor sit amet."
-              src="dana"
-
-          >
-           <Baixar file="1"/>
-          </Card>
-           <Card 
-              titulo="Paper Toys"
-              texto="Lorem ipsum dolor sit amet."
-              src="dana"
-
-          >
-           <Baixar file="1"/>
-          </Card>
+            <p className="Azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque! </p></Box>
         </div>
-
+        <CardsGrid />
         <div className="row">
           <Newsletter className="col-sm-12" style={{padding:'0px'}}/>
         </div>
-
       </div>
     );
   }

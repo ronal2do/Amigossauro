@@ -6167,7 +6167,7 @@ h1 {
   background-color: transparent; }
 
 .Divisor {
-  visibility: hidden; }
+  display: none; }
 
 .st0 {
   fill: #FECE06; }
@@ -6200,8 +6200,13 @@ strong {
   margin-bottom: -8px;
   color: #ab0202; }
 
+select#cidade {
+  margin-top: 10px; }
+
 @media only screen and (min-width: 768px) {
   .Itens {
     padding: 0 8px; }
+  select#cidade {
+    margin-top: none; }
   .Divisor {
     visibility: visible; } }

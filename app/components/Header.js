@@ -79,7 +79,6 @@ class Header extends React.Component {
                 <li><Link to="/blog" activeStyle={active}>Blog</Link></li>
                 <Divisor />
                 <li><Link to="/contato" activeStyle={active}>Contato</Link></li>
-                
               </ul>
               
             </div>

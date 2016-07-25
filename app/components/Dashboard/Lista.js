@@ -7,7 +7,6 @@ class Lista extends React.Component {
 		      dataCount: 0
 		    }
 	}
-
 	componentWillReceiveProps (props) {
 	    this.setState({dataCount: props.data.length})
 	}

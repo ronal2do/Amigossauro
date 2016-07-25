@@ -1,6 +1,7 @@
 import React from 'react';
 import Lista from './Lista.js';
 
+
 class Dashboard extends React.Component {
    	constructor(props) {
 		super(props);

@@ -351,9 +351,9 @@ h1{
     .static {
       padding: 5em 0 20em;
       background: #1085bc;
-      background-image: url(../images/header.png);
+      background-image: url(../images/header-mob.png);
       background-size: cover;
-      background-position: center;
+      background-position: center bottom;
       color: white;
       text-align: center;
     }
@@ -478,7 +478,10 @@ select#cidade {
       margin-top: 0px;
     }
     .Divisor{
-      visibility: visible;
+      display: block;
+    }
+    .static {
+        background-image: url(../images/header.png);
     }
 }
 

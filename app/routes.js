@@ -44,7 +44,7 @@ export default function getRoutes(store) {
       <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
       <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
-      <Route path="/dashboard" component={Dashboard} >
+      <Route path="/dashboard" component={Dashboard} onEnter={ensureAuthenticated} onLeave={clearMessages}>
 
       </Route>
       <Route path="*" component={NotFound} onLeave={clearMessages}/>

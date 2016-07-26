@@ -13,8 +13,8 @@ class Card extends React.Component {
               <div className="col-sm-3">
                 <img src={'./images/' + this.props.src + '-casa.png' } className="img-responsive" alt={this.props.src}/>
               </div>
-              <div className="col-sm-5 text-right">
-                  <p>{ this.props.texto }</p>
+              <div className="col-sm-5">
+                  <p className="Paragrafo">{ this.props.texto }</p>
               </div>
             </div>
           </div>

@@ -9,18 +9,18 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-          nome: '', 
-          email: '', 
-          estado: '', 
-          cidade: '', 
-          valido: '', 
-          nvalido: '' 
+        nome: '' 
+      , email: '' 
+      , estado: '' 
+      , cidade: '' 
+      , valido: '' 
+      , nvalido: '' 
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validarEmail = this.validarEmail.bind(this);
-    this.validarNome = this.validarNome.bind(this);
+    this.validarNome  = this.validarNome.bind(this);
   }
 
   handleChange(event) {
@@ -43,7 +43,8 @@ class Form extends React.Component {
   }
 
   validarNome(event){
-      if (event.target.value == ''){
+      const validarNome = /^[a-záàâãéèêíïóôõöúçñ ]+$/;
+      if (validarNome.test(event.target.value) === false  || event.target.value == ''){
           console.log(event.target.value);
           console.log('inválido');
           this.setState({ nvalido: 'error'});
@@ -53,9 +54,9 @@ class Form extends React.Component {
       }
   }
 
-  validarEmail(value){
+  validarEmail(event){
       const validar = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (validar.test(event.target.value) == false  || event.target.value == ''){
+      if (validar.test(event.target.value) === false  || event.target.value == ''){
           console.log(event.target.value);
           console.log('inválido');
           this.setState({ valido: 'error'});

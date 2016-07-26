@@ -55,36 +55,36 @@ export default class Videos extends React.Component {
 
 	       	<div className="text-center" style={{marginBottom:'15px', paddingTop:'15px'}}>
 
-		       	<div className="col-sm-3 Itens">
+		       	<div className="col-xs-6 col-sm-3 Itens">
 		       		<a href='' onClick={this.onChangeVideo}>
 			       	 	<Item
-			            	nome="meu nome Ed"
+			            	nome="Amigossauro"
 							id={videoIdA}
 			       	 	/>	
 		       	 	</a>
 		       	</div>
 
-		       	<div className="col-sm-3 Itens"> 
+		       	<div className="col-xs-6 col-sm-3 Itens"> 
 		       	 	<a href='' onClick={this.onChangeVideoB}>
 			       	 	<Item
-			            	nome="meu nome 2"
+			            	nome="Você parece um dinossauro"
 							id={videoIdB}
 			       	 	/>	
 		       	 	</a>
 		       	</div>
 
-		       	<div className="col-sm-3 Itens">
+		       	<div className="col-xs-6 col-sm-3 Itens">
 		       	 	<a href='' onClick={this.onChangeVideoC}>
 			       	 	<Item
-			            	nome="meu nome 3"
+			            	nome="Cheirinho bom"
 							id={videoIdC}
 			       	 	/>
 		       	 	</a>
 		       	</div>
-		       	<div className="col-sm-3 Itens">
+		       	<div className="col-xs-6 col-sm-3 Itens">
 		       	 	<a href='' onClick={this.onChangeVideoD}>
 			       	 	<Item
-			            	nome="meu nome 3"
+			            	nome="Hora de dormir"
 							id={videoIdD}
 			       	 	/>
 		       	 	</a>

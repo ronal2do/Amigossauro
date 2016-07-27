@@ -248,6 +248,14 @@ textarea {
     border-radius: 8px;
     box-shadow: 0 3px 0px $azul-escuro, inset 0 1px 15px rgba(150, 160, 175, 0.05)
 }
+.form-control.contato {
+    background-color:$dana;
+    color:$danatexto;
+    padding: 9px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 3px 0px $danatexto, inset 0 1px 15px rgba(150, 160, 175, 0.05)
+}
 .form-control::-webkit-input-placeholder {
   color: $azul-escuro;
 }
@@ -261,7 +269,6 @@ textarea {
   color: $azul-escuro;
 }
 .form-group > label {
-  text-transform: uppercase;
   font-size: 13px;
 }
 
@@ -282,7 +289,6 @@ textarea {
   background-color: #fff;
   border-radius: 2px;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 h1,
@@ -290,7 +296,6 @@ h2,
 h3,
 h4,
 h5{
-  text-transform: uppercase;
   font-family: 'Runcible';
   font-weight: 100;
 }
@@ -397,9 +402,16 @@ h1{
     }
 }
 .btn-newsletter{
-    text-transform: uppercase;
     color: white;
     background: #f81948;
+    border-radius: 11px;
+    box-shadow: 0 3px 0px #540404, inset 0 1px 15px rgba(150, 160, 175, 0.05);
+    padding: 6px 31px;
+    border-color: transparent;
+}
+.btn-contato{
+    color: white;
+    background: $azul-escuro;
     border-radius: 11px;
     box-shadow: 0 3px 0px #540404, inset 0 1px 15px rgba(150, 160, 175, 0.05);
     padding: 6px 31px;

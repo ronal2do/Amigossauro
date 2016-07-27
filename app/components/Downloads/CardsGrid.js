@@ -10,28 +10,28 @@ class CardsGrid extends React.Component {
 	            <Card 
 	                titulo="Jogos"
 	                texto="Lorem ipsum dolor sit amet."
-	                src="dana"
+	                src="home"
 	            >
 	                <Baixar file="1"/>
 	            </Card>
 	            <Card 
 	                titulo="Para Colorir"
 	                texto="Lorem ipsum dolor sit amet."
-	                src="dana"
+	                src="home"
 	              >
 	                  <Baixar file="1"/>
 	            </Card>
 	             <Card 
 	                titulo="Letras e Cifras"
 	                texto="Lorem ipsum dolor sit amet."
-	                src="dana"
+	                src="home"
 	            >
 	                <Baixar file="1"/>
 	            </Card>
 	            <Card 
 	                titulo="Paper Toys"
 	                texto="Lorem ipsum dolor sit amet."
-	                src="dana"
+	                src="home"
 	            >
 	                <Baixar file="1"/>
 	            </Card>

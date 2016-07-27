@@ -17,16 +17,16 @@ class Home extends React.Component {
           <Social />
         </div>
         <div className="row">
-
           <Box 
             titulo="Ruaar"
             src="home"
           >
             <p className="Azul">De três ovos perdidos em uma floresta mágica, nasceram três dinossauros: o <strong>Dim</strong>, a <strong>Dana</strong> e o <strong>Deco</strong>.
             <br/>Juntos, eles descobriram o poder da amizade e hoje formam um grupo muito divertido: o <strong>Amigossauro</strong>.
-            <br/>Chame todas as crianças para fazer parte dessa turma, onde a imaginação não tem limites.</p></Box>
-          <Videos />          
-
+            <br/>Chame todas as crianças para fazer parte dessa turma, onde a imaginação não tem limites.</p>
+          </Box>
+            <div className="Padding-top"></div>
+            <Videos titulo="nossos vídeos"/>
         </div>
         <div className="row">
           <Frase />

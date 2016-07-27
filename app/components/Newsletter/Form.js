@@ -67,7 +67,6 @@ class Form extends React.Component {
   }
 
   render() {
-
     return (
           <div className="padding-top">
             <Messages messages={this.props.messages}/>
@@ -118,7 +117,7 @@ class Form extends React.Component {
                 </div>
                 <div className="form-group">
                   <div className="col-sm-12">
-                    <Submit texto="Enviar" />
+                    <Submit texto="Enviar" classe="newsletter"/>
                   </div>
                 </div>
               </form>

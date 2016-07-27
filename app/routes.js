@@ -9,6 +9,7 @@ import Teste from './components/Dashboard/Teste';
 import Downloads from './components/Downloads/';
 import Dashboard from './components/Dashboard/';
 import Blog from './components/Blog/';
+import Single from './components/Blog/Single';
 import NotFound from './components/NotFound';
 import Login from './components/Account/Login';
 import Signup from './components/Account/Signup';
@@ -40,14 +41,15 @@ export default function getRoutes(store) {
         <Route path="/amizade" component={Amizade} onLeave={clearMessages}/>
         <Route path="/downloads" component={Downloads} onLeave={clearMessages}/>
         <Route path="/blog" component={Blog} onLeave={clearMessages}/>
+        <Route path="blog/single" component={Single} onLeave={clearMessages}/>
         <Route path="/login" component={Login} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
         <Route path="/signup" component={Signup} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
         <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
         <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
         <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       </Route>
-      <Route path="/dashboard" component={Dashboard} onEnter={ensureAuthenticated} onLeave={clearMessages}>
-         <Route path="/" component={Teste} />
+      <Route path="/dashboard" component={Dashboard}>
+        <IndexRoute component={Teste} onLeave={clearMessages}/>
       </Route>
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>

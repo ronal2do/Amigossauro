@@ -3,7 +3,7 @@ import React from 'react';
 class Site extends React.Component {
   render() {
     return (
-        <div className="Fundo">
+        <div>
         	{this.props.children}
         </div>
     );

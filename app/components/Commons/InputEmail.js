@@ -3,28 +3,46 @@ import React from 'react';
 export default class InputEmail extends React.Component {
 	
 	constructor(props) {
-	    super(props);
+	    super(props)
 
-	    this.state = {
-	        validatar: false
-	    };
+  	}
+
+  	validar(event){
+		if (event.target.value == ''){
+		  console.log(event.target.value);
+		  console.log('inválido');
+		  this.setState({ valido: 'error'});
+		} else {
+			console.log('valido');
+			this.setState({ valido: ''});
+		}
 	}
 
-	validar(value){
-		const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    	return re.test(value);
-		console.log("blur, validar");
+	validarEmail(event){
+	      const validar = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	      if (validar.test(event.target.value) === false  || event.target.value == ''){
+	          console.log(event.target.value);
+	          console.log('inválido');
+	          this.setState({ valido: 'error'});
+	      } else {
+	        console.log('valido');
+	        this.setState({ valido: ''});
+	      }
 	}
 	 
   	render() {
     	return (
-    	  	<input 
-	            type="email" 
-	            onBlur={this.validar} 
-	            className="form-control" 
-	            placeholder={this.props.placeholder}  
-	            validate={this.state}
-	        />
+  				<div className="col-sm-12">
+					<input 
+	                    type="email"
+	                    name="email"
+	                    ref="email"
+	                    id="email"
+	                    value="email"
+	                    placeholder="E-mail: "
+                    />
+                 
+				</div>
     	) ;
   }
 }

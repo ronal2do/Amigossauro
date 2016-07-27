@@ -49,8 +49,8 @@ export default class Videos extends React.Component {
 
 	    <div className="col-sm-12 text-center Azul">
 
-	    	<h2 style={{paddingTop: '40px'}}>Nossos Vídeos</h2>
-	     
+	    	<h2>{this.props.titulo}</h2>
+	     		{this.props.children}
 			<Video videoId={this.state.videoId} />
 
 	       	<div className="text-center" style={{marginBottom:'15px', paddingTop:'15px'}}>

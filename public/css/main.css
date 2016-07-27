@@ -5988,6 +5988,14 @@ textarea {
   border-radius: 8px;
   box-shadow: 0 3px 0px #0270ab, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
 
+.form-control.contato {
+  background-color: #fcf1c4;
+  color: #bf4d93;
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 0px #bf4d93, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+
 .form-control::-webkit-input-placeholder {
   color: #0270ab; }
 
@@ -6001,7 +6009,6 @@ textarea {
   color: #0270ab; }
 
 .form-group > label {
-  text-transform: uppercase;
   font-size: 13px; }
 
 .hr-title {
@@ -6019,15 +6026,13 @@ textarea {
   top: -10px;
   background-color: #fff;
   border-radius: 2px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase; }
+  letter-spacing: 0.2em; }
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-  text-transform: uppercase;
   font-family: 'Runcible';
   font-weight: 100; }
 
@@ -6126,9 +6131,16 @@ h1 {
     padding: 5px 6px; }
 
 .btn-newsletter {
-  text-transform: uppercase;
   color: white;
   background: #f81948;
+  border-radius: 11px;
+  box-shadow: 0 3px 0px #540404, inset 0 1px 15px rgba(150, 160, 175, 0.05);
+  padding: 6px 31px;
+  border-color: transparent; }
+
+.btn-contato {
+  color: white;
+  background: #0270ab;
   border-radius: 11px;
   box-shadow: 0 3px 0px #540404, inset 0 1px 15px rgba(150, 160, 175, 0.05);
   padding: 6px 31px;

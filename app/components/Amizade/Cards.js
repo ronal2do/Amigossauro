@@ -1,6 +1,7 @@
 import React from 'react';
   const m = {
-    marginBottom: '-12px'
+    marginBottom: '-12px',
+    fontSize: '37px'
   }
 class Card extends React.Component {
   render() {
@@ -10,14 +11,26 @@ class Card extends React.Component {
           <div className={ 'panel ' + this.props.titulo }>
             <div className="panel-body">
               <div className="col-sm-4">
-                <img src={'./images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src}/>
+
+                <img src={'./images/' + this.props.src + '.png' } 
+                     className="img-responsive" 
+                     alt={this.props.src}
+                     style={{marginLeft:'0px'}}
+                     />
               </div>
+
               <div className="col-sm-3">
-                <img src={'./images/' + this.props.src + '-casa.png' } className="img-responsive" alt={this.props.src}/>
+                <img src={'./images/' + this.props.src + '-casa.png' } 
+                     className="img-responsive" 
+                     alt={this.props.src}
+                     style={{marginLeft:'0px'}}
+                     />
               </div>
+
               <div className="col-sm-5">
-                  <p className="Paragrafo">{ this.props.texto }</p>
+                  { this.props.children }
               </div>
+
             </div>
           </div>
       </div>

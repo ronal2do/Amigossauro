@@ -11,7 +11,7 @@ var SelectedImg = React.createClass({
   render: function() {
     return (
       <div className="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src={this.props.hero}></iframe>  
+        <iframe className="embed-responsive-item" src={this.props.hero}></iframe>  
       </div>
     )
   }  

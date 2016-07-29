@@ -58,6 +58,8 @@ html {
 body {
   margin-bottom: 44px;
   background-color: #fff;
+  background-image: url(../images/bg.png);
+  background-repeat: repeat;
 }
 
 footer {
@@ -66,7 +68,7 @@ footer {
     width: 100%;
     height: 672px;
     padding: 30px;
-    background-image: url(../images/footer.png);
+    background-image: url(../images/footer-mob.png);
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -440,10 +442,10 @@ h1{
   font-size: 1.4em;
 };
 
-.Fundo{
-    background-image: url(../images/bg.png);
-    background-repeat: repeat;
-}
+// .Fundo{
+//     background-image: url(../images/bg.png);
+//     background-repeat: repeat;
+// }
 .navbar-default .navbar-nav > li > a:hover {
     border-bottom-color: #f88144;
 }
@@ -504,6 +506,9 @@ select#cidade {
     }
     .static {
         background-image: url(../images/header.png);
+    }
+    footer {
+        background-image: url(../images/footer.png);
     }
 }
 

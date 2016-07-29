@@ -28,6 +28,11 @@ export default function getRoutes(store) {
       replace('/');
     }
   };
+
+  function scrollBefore(nextState, transition, callback) {
+      window.scrollTo(0, 500);
+  };
+
   const clearMessages = () => {
     store.dispatch({
       type: 'CLEAR_MESSAGES'

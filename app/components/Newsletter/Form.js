@@ -4,6 +4,8 @@ import { submitNewsletterForm } from '../../actions/newsletter';
 import Messages from '../Messages';
 import Submit from './../commons/Submit';
 
+
+
 class Form extends React.Component {
   
   constructor(props) {

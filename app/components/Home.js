@@ -18,7 +18,7 @@ class Home extends React.Component {
         </div>
         <div className="row">
           <Box 
-            titulo="Ruaar"
+            titulo="Ruaar!!!"
             src="home"
           >
             <p className="Azul">De três ovos perdidos em uma floresta mágica, nasceram três dinossauros: o <strong>Dim</strong>, a <strong>Dana</strong> e o <strong>Deco</strong>.

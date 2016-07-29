@@ -1,31 +1,33 @@
 import React from 'react';
-import Lista from './Lista.js';
+import Home from './Home';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 
 class Dashboard extends React.Component {
    	constructor(props) {
 		super(props);
-		this.state = {
-			data: []
-		};
 	}
 
   	render() {
     	return (
-           	<section className="container">
-		      	<Lista data={this.state.data} />
-	      	</section>
+          <div>
+            <link rel="stylesheet" href="css/dashboard.css" />
+            <link rel="stylesheet" href="css/themify-icons.css" />
+            <div className="wrapper">
+  				    <Sidebar />
+  		      	<div className="main-panel">
+                  <Navbar />
+                  <div className="content">
+                    {this.props.children}
+                  </div>
+                  <Footer />
+              </div>
+            </div>
+	      	</div>
     	);
   	}
 
-	componentDidMount() {
-	    fetch('/newsletter').then((response) => {
-	        return response.json();
-	    }).then((data) => {
-	        this.setState({data: data});
-	    }).catch((err) => {
-	        throw new Error(err);
-	    });
-  	}
 }
 export default Dashboard;

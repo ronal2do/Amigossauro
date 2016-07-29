@@ -5851,7 +5851,6 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 44px;
   background-color: #fff;
   background-image: url(../images/bg.png);
   background-repeat: repeat; }
@@ -6080,7 +6079,8 @@ h1 {
   top: 0;
   width: 100%;
   padding: 0;
-  border-top: 3px solid #ea547a;
+  margin-top: -1px;
+  border-top: 4px solid #ea547a;
   background-color: #e12347;
   background-size: 100px 100px;
   color: white;

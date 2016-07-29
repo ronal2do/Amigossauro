@@ -12,7 +12,7 @@ class Card extends React.Component {
           <div className={ ' ' + this.props.titulo }>
             <div className="panel-body">
               <div style={padding}>
-                <img src={'./images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src}/>
+                <img src={'/images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src}/>
               </div>
             
             </div>

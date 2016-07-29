@@ -65,7 +65,6 @@ class Downloads extends React.Component {
 
                   window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
               } else {
-                  console.log('scroll done');
                   window.scrollTo(0, scrollTargetY);
               }
           }

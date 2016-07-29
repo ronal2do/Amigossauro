@@ -5,8 +5,9 @@ import Site from './components/Site';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Amizade from './components/Amizade';
-import Teste from './components/Dashboard/Teste';
+import HomeDash from './components/Dashboard/Home';
 import Downloads from './components/Downloads/';
+import Jogos from './components/Downloads/Single';
 import Dashboard from './components/Dashboard/';
 import Blog from './components/Blog/';
 import Single from './components/Blog/Single';
@@ -45,6 +46,7 @@ export default function getRoutes(store) {
         <Route path="/contato" component={Contact} onLeave={clearMessages}/>
         <Route path="/amizade" component={Amizade} onLeave={clearMessages}/>
         <Route path="/downloads" component={Downloads} onLeave={clearMessages}/>
+        <Route path="/downloads/jogos" component={Jogos} onLeave={clearMessages}/>
         <Route path="/blog" component={Blog} onLeave={clearMessages}/>
         <Route path="blog/single" component={Single} onLeave={clearMessages}/>
         <Route path="/login" component={Login} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
@@ -54,7 +56,7 @@ export default function getRoutes(store) {
         <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
       </Route>
       <Route path="/dashboard" component={Dashboard}>
-        <IndexRoute component={Teste} onLeave={clearMessages}/>
+        <IndexRoute component={HomeDash} onLeave={clearMessages}/>
       </Route>
       <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>

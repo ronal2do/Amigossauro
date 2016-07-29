@@ -10,7 +10,7 @@ class Card extends React.Component {
           <div className={ 'panel ' + this.props.titulo }>
             <div className="panel-body">
               <div className="col-sm-6">
-                <img src={'./images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src}/>
+                <img src={'/images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src}/>
               </div>
               <div className="col-sm-6 text-right">
                   <p className="text-left">{ this.props.texto }</p>

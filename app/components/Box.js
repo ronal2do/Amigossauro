@@ -13,7 +13,7 @@ class Box extends React.Component {
        		</div>
 
        		<div className="col-sm-4">
-       			<img src={'./images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src} />
+       			<img src={'/images/' + this.props.src + '.png' } className="img-responsive" alt={this.props.src} />
        		</div>
           <br/>
           <br/>

@@ -24,14 +24,11 @@ export default function getRoutes(store) {
       replace('/login');
     }
   };
+
   const skipIfAuthenticated = (nextState, replace) => {
     if (store.getState().auth.token) {
       replace('/');
     }
-  };
-
-  function scrollBefore(nextState, transition, callback) {
-      window.scrollTo(0, 500);
   };
 
   const clearMessages = () => {

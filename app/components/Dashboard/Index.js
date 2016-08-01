@@ -22,7 +22,6 @@ class Dashboard extends React.Component {
                   <div className="content">
                     {this.props.children}
                   </div>
-                  <Footer />
               </div>
             </div>
 	      	</div>

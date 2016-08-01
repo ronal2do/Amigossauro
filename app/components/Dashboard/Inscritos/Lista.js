@@ -1,15 +1,6 @@
 import React from 'react';
 
 class Lista extends React.Component {
-    constructor(props) {
-	    super(props)
-		    this.state = {
-		      dataCount: 0
-		    }
-	}
-	componentWillReceiveProps (props) {
-	    this.setState({dataCount: props.data.length})
-	}
 
   	render() {
     const { data } = this.props;

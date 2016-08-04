@@ -15,7 +15,7 @@ class Linha extends React.Component {
                                 </div>
                                 <div className="col-xs-7">
                                     <div className="numbers">
-                                        <p>Capacity</p>
+                                        <p>Disco</p>
                                         105GB
                                     </div>
                                 </div>
@@ -24,7 +24,7 @@ class Linha extends React.Component {
 						<div className="card-footer">
 							<hr/>
 							<div className="stats">
-								<i className="ti-reload"></i> Updated now
+								<i className="ti-reload"></i> Atualizar
 							</div>
 						</div>
                     </div>
@@ -40,8 +40,8 @@ class Linha extends React.Component {
                                 </div>
                                 <div className="col-xs-7">
                                     <div className="numbers">
-                                        <p>Revenue</p>
-                                        $1,345
+                                        <p>Créditos</p>
+                                        R$1,345
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ class Linha extends React.Component {
 						<div className="card-footer">
 							<hr/>
 							<div className="stats">
-								<i className="ti-calendar"></i> Last day
+								<i className="ti-calendar"></i> Ultimos dias
 							</div>
 						</div>
                     </div>
@@ -65,8 +65,8 @@ class Linha extends React.Component {
                                 </div>
                                 <div className="col-xs-7">
                                     <div className="numbers">
-                                        <p>Errors</p>
-                                        23
+                                        <p>Erros</p>
+                                        01
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ class Linha extends React.Component {
 						<div className="card-footer">
 							<hr/>
 							<div className="stats">
-								<i className="ti-timer"></i> In the last hour
+								<i className="ti-timer"></i> Na ultima hora
 							</div>
 						</div>
                     </div>
@@ -90,8 +90,8 @@ class Linha extends React.Component {
                                 </div>
                                 <div className="col-xs-7">
                                     <div className="numbers">
-                                        <p>Followers</p>
-                                        +45
+                                        <p>Seguidores</p>
+                                        +3
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ class Linha extends React.Component {
 						<div className="card-footer">
 							<hr/>
 							<div className="stats">
-								<i className="ti-reload"></i> Updated now
+								<i className="ti-reload"></i> Atualizar
 							</div>
 						</div>
                     </div>

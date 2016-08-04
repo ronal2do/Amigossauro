@@ -7,7 +7,7 @@ class Ul extends React.Component {
             <li>
                 <a href="#stats" className="dropdown-toggle btn-magnify" data-toggle="dropdown">
                     <i className="ti-panel"></i>
-					<p>Stats</p>
+					<p> Opções</p>
                 </a>
             </li>
             <li className="dropdown">
@@ -15,7 +15,7 @@ class Ul extends React.Component {
                     <i className="ti-bell"></i>
                     <span className="notification">5</span>
 					<p>
-						Notifications <b className="caret"></b>
+						Notificações <b className="caret"></b>
 					</p>
                 </a>
                 <ul className="dropdown-menu">
@@ -29,7 +29,7 @@ class Ul extends React.Component {
 			<li>
                 <a href="#settings" className="btn-rotate">
 					<i className="ti-settings"></i>
-					<p>Settings</p>
+					<p> Configurações</p>
                 </a>
             </li>
         </ul>

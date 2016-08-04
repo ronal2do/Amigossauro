@@ -11,7 +11,7 @@ class Header extends React.Component {
 	            <span className="icon-bar bar3"></span>
 	        </button>
 	        <a className="navbar-brand" href="#Dashboard">
-				Overview
+				Geral
 			</a>
 	    </div>
     );

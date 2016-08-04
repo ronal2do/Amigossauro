@@ -62,9 +62,11 @@ class Form extends React.Component {
           console.log(event.target.value);
           console.log('inválido');
           this.setState({ valido: 'error'});
+          //chamar componente de mensagem com a state.meangem
       } else {
         console.log('valido');
         this.setState({ valido: ''});
+        //chamar componente de mensagem com a state.meangem
       }
   }
 

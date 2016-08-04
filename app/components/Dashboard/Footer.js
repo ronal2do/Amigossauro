@@ -9,7 +9,7 @@ class Footer extends React.Component {
 	                    <ul>
 	                        <li>
 	                            <a href="http://www.creative-tim.com">
-	                                Creative Tim
+	                                Caaa
 	                            </a>
 	                        </li>
 	                        <li>

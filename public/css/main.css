@@ -5853,7 +5853,8 @@ html {
 body {
   background-color: #fff;
   background-image: url(../images/bg.png);
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  font-size: 13.75px; }
 
 footer {
   position: absolute;
@@ -5990,12 +5991,29 @@ textarea {
   box-shadow: 0 3px 0px #0270ab, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
 
 .form-control.contato {
-  background-color: #fcf1c4;
-  color: #bf4d93;
+  background-color: #fcec96;
+  color: #f15822;
   padding: 9px;
   border: none;
   border-radius: 8px;
-  box-shadow: 0 3px 0px #bf4d93, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+  box-shadow: 0 3px 0px #fdce08, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+
+.form-control.contato:focus {
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 6px 0px #fdce08, inset 0 1px 15px rgba(150, 160, 175, 0.05); }
+
+.form-control.contato::-webkit-input-placeholder {
+  color: #f15822; }
+
+.form-control.contato:-moz-placeholder {
+  color: #f15822; }
+
+.form-control.contato::-moz-placeholder {
+  color: #f15822; }
+
+.form-control.contato:-ms-input-placeholder {
+  color: #f15822; }
 
 .form-control::-webkit-input-placeholder {
   color: #0270ab; }
@@ -6035,10 +6053,13 @@ h3,
 h4,
 h5 {
   font-family: 'Runcible';
-  font-weight: 100; }
+  font-weight: 100;
+  margin-top: 1px;
+  margin-bottom: 21.5px; }
 
 h1 {
-  font-family: 'DaftBrush'; }
+  font-family: 'DaftBrush';
+  font-size: 44px; }
 
 .Dim {
   background-color: #c7f3f4;
@@ -6104,6 +6125,9 @@ h1 {
 
 .Azul {
   color: #0270ab; }
+
+p.Azul {
+  font-size: 1.2em; }
 
 .Padding-top {
   padding-top: 40px; }
@@ -6220,6 +6244,19 @@ select#cidade {
   text-align: center;
   padding-top: 10px; }
 
+.owl-next {
+  float: right;
+  margin-top: -75px;
+  margin-right: -25px; }
+
+.owl-prev {
+  float: left;
+  margin-top: -75px;
+  margin-left: -25px; }
+
+.OwlCarousel {
+  padding: 15px 25px 0px; }
+
 @media only screen and (min-width: 768px) {
   .Itens {
     padding: 0 8px; }
@@ -6232,4 +6269,18 @@ select#cidade {
   .static {
     background-image: url(../images/header.png); }
   footer {
-    background-image: url(../images/footer.png); } }
+    background-image: url(../images/footer.png); }
+  .owl-next,
+  .owl-prev {
+    text-align: center;
+    font-family: 'DaftBrush';
+    color: #db2e2a;
+    font-size: 4em; }
+  .owl-next {
+    float: right;
+    margin-top: -90px;
+    margin-right: -25px; }
+  .owl-prev {
+    float: left;
+    margin-top: -90px;
+    margin-left: -25px; } }

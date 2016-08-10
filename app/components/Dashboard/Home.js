@@ -1,9 +1,9 @@
 import React from 'react';
-import Linha from './Home/Linha';
-import LinhaT from './Home/LinhaT';
-import Table from './Widgets/Table';
-import Users from './Widgets/Users';
-import Tasks from './Widgets/Tasks';
+import Linha from './Home/Linha/Index';
+import LinhaT from './Home/LinhaT/Index';
+import Table from './Widgets/Table/Index';
+import Users from './Widgets/Users/Index';
+import Tasks from './Widgets/Tasks/Index';
 
 
 class Home extends React.Component {

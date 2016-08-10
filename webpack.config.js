@@ -1,7 +1,5 @@
-var path    = require('path');
+var path = require('path');
 var webpack = require('webpack');
-
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
   devtool: 'cheap-module-eval-source-map',
@@ -17,14 +15,12 @@ var config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin("styles.css"),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ],
   module: {
-
     loaders: [
       {
         test: /\.js$/,
@@ -38,8 +34,7 @@ var config = {
                   transform: 'react-transform-hmr',
                   imports: ['react'],
                   locals: ['module']
-                },
-                 {
+                }, {
                   transform: 'react-transform-catch-errors',
                   imports: ['react', 'redbox-react']
                 }
@@ -47,8 +42,7 @@ var config = {
             }]
           ]
         }
-      },      
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},
+      }
     ]
   }
 };

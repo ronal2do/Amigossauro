@@ -1,5 +1,6 @@
 import React from 'react';
 
+import OwlCarousel from 'react-owl-carousel';
 
 import Item from './Item';
 import Video from './Video';
@@ -60,7 +61,57 @@ export default class Videos extends React.Component {
 	    	<h2>{this.props.titulo}</h2>
 	     		{this.props.children}
 			<Video videoId={this.state.videoId} />
-
+			<OwlCarousel slideSpeed={300} items={4} navigation navigationText={['<', '>']} style={{padding:'35px 25px 0px'}} autoPlay>
+ 			    <div className="Itens">
+ 		       	 	<a href='' onClick={this.onChangeVideoF}>
+ 			       	 	<Item
+ 			            	nome="Hora de dormir"
+ 							id={videoIdF}
+ 			       	 	/>
+ 		       	 	</a>
+ 		       	</div>
+ 		       	<div className="Itens">
+ 		       	 	<a href='' onClick={this.onChangeVideoE}>
+ 			       	 	<Item
+ 			            	nome="Hora de dormir"
+ 							id={videoIdE}
+ 			       	 	/>
+ 		       	 	</a>
+ 		       	</div>
+ 		       	<div className="Itens">
+ 		       		<a href='' onClick={this.onChangeVideo}>
+ 			       	 	<Item
+ 			            	nome="Amigossauro"
+ 							id={videoIdA}
+ 			       	 	/>	
+ 		       	 	</a>
+ 		       	</div>
+ 		       	<div className="Itens"> 
+ 		       	 	<a href='' onClick={this.onChangeVideoB}>
+ 			       	 	<Item
+ 			            	nome="Você parece um dinossauro"
+ 							id={videoIdB}
+ 			       	 	/>	
+ 		       	 	</a>
+ 		       	</div>
+ 
+ 		       	<div className="Itens">
+ 		       	 	<a href='' onClick={this.onChangeVideoC}>
+ 			       	 	<Item
+ 			            	nome="Cheirinho bom"
+ 							id={videoIdC}
+ 			       	 	/>
+ 		       	 	</a>
+ 		       	</div>
+ 		       	<div className="Itens">
+ 		       	 	<a href='' onClick={this.onChangeVideoD}>
+ 			       	 	<Item
+ 			            	nome="Hora de dormir"
+ 							id={videoIdD}
+ 			       	 	/>
+ 		       	 	</a>
+ 		       	</div>
+ 			</OwlCarousel>
 
 	    </div>
     );

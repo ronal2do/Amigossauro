@@ -26,6 +26,11 @@ var config = {
   module: {
 
     loaders: [
+      { test: /\.css$/, loader: ExtractTextPlugin.extract({
+        notExtractLoader: "style-loader",
+        loader: "css-loader?sourceMap",
+        publicPath: "../"
+      }) },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -47,8 +52,8 @@ var config = {
             }]
           ]
         }
-      },      
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')},
+      }
+
     ]
   }
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { submitNewsletterForm } from '../../actions/newsletter';
 import Messages from '../Messages';
-import Submit from './../commons/Submit';
+import Submit from './../Commons/Submit';
 
 
 

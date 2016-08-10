@@ -1,5 +1,5 @@
 import React from 'react';
-import Linha from './commons/Linha';
+import Linha from './Commons/Linha';
 
 class Box extends React.Component {
   render() {

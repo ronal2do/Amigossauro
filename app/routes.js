@@ -8,7 +8,7 @@ import Amizade from './components/Amizade';
 import HomeDash from './components/Dashboard/Home';
 import Downloads from './components/Downloads/Index';
 import Jogos from './components/Downloads/Single';
-import Dashboard from './components/Dashboard/';
+import Dashboard from './components/Dashboard/Index';
 import Blog from './components/Blog/Index';
 import Single from './components/Blog/Single';
 import NotFound from './components/NotFound';

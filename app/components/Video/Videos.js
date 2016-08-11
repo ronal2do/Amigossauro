@@ -1,7 +1,5 @@
 import React from 'react';
 
-import OwlCarousel from 'react-owl-carousel';
-
 import Item from './Item';
 import Video from './Video';
 
@@ -25,9 +23,9 @@ export default class Videos extends React.Component {
     this.onChangeVideoB = this.onChangeVideoB.bind(this);
     this.onChangeVideoC = this.onChangeVideoC.bind(this);
     this.onChangeVideoD = this.onChangeVideoD.bind(this);
-    this.onChangeVideoE = this.onChangeVideoD.bind(this);
-    this.onChangeVideoF = this.onChangeVideoD.bind(this);
-}
+    this.onChangeVideoE = this.onChangeVideoE.bind(this);
+    this.onChangeVideoF = this.onChangeVideoF.bind(this);
+  }
 
   onChangeVideo(e) {
 	e.preventDefault()
@@ -57,61 +55,61 @@ export default class Videos extends React.Component {
   render() {    	
     return (
 	    <div className="col-sm-12 text-center Azul">
-	    
+
 	    	<h2>{this.props.titulo}</h2>
 	     		{this.props.children}
 			<Video videoId={this.state.videoId} />
-			<OwlCarousel slideSpeed={300} items={4} navigation navigationText={['<', '>']} style={{padding:'35px 25px 0px'}} autoPlay>
- 			    <div className="Itens">
- 		       	 	<a href='' onClick={this.onChangeVideoF}>
- 			       	 	<Item
- 			            	nome="Hora de dormir"
- 							id={videoIdF}
- 			       	 	/>
- 		       	 	</a>
- 		       	</div>
- 		       	<div className="Itens">
- 		       	 	<a href='' onClick={this.onChangeVideoE}>
- 			       	 	<Item
- 			            	nome="Hora de dormir"
- 							id={videoIdE}
- 			       	 	/>
- 		       	 	</a>
- 		       	</div>
- 		       	<div className="Itens">
- 		       		<a href='' onClick={this.onChangeVideo}>
- 			       	 	<Item
- 			            	nome="Amigossauro"
- 							id={videoIdA}
- 			       	 	/>	
- 		       	 	</a>
- 		       	</div>
- 		       	<div className="Itens"> 
- 		       	 	<a href='' onClick={this.onChangeVideoB}>
- 			       	 	<Item
- 			            	nome="Você parece um dinossauro"
- 							id={videoIdB}
- 			       	 	/>	
- 		       	 	</a>
- 		       	</div>
- 
- 		       	<div className="Itens">
- 		       	 	<a href='' onClick={this.onChangeVideoC}>
- 			       	 	<Item
- 			            	nome="Cheirinho bom"
- 							id={videoIdC}
- 			       	 	/>
- 		       	 	</a>
- 		       	</div>
- 		       	<div className="Itens">
- 		       	 	<a href='' onClick={this.onChangeVideoD}>
- 			       	 	<Item
- 			            	nome="Hora de dormir"
- 							id={videoIdD}
- 			       	 	/>
- 		       	 	</a>
- 		       	</div>
- 			</OwlCarousel>
+
+			<div className="owl-carousel" style={{padding:'25px 25px 0px'}}>
+			    <div className="Itens">
+		       	 	<a onClick={this.onChangeVideoF}>
+			       	 	<Item
+			            	nome="Hora de dormir"
+							id={videoIdF}
+			       	 	/>
+		       	 	</a>
+		       	</div>
+		       	<div className="Itens">
+		       	 	<a onClick={this.onChangeVideoE}>
+			       	 	<Item
+			            	nome="Hora de dormir"
+							id={videoIdE}
+			       	 	/>
+		       	 	</a>
+		       	</div>
+		       	<div className="Itens">
+		       		<a onClick={this.onChangeVideo}>
+			       	 	<Item
+			            	nome="Amigossauro"
+							id={videoIdA}
+			       	 	/>	
+		       	 	</a>
+		       	</div>
+		       	<div className="Itens"> 
+		       	 	<a onClick={this.onChangeVideoB}>
+			       	 	<Item
+			            	nome="Você parece um dinossauro"
+							id={videoIdB}
+			       	 	/>	
+		       	 	</a>
+		       	</div>
+		       	<div className="Itens">
+		       	 	<a onClick={this.onChangeVideoC}>
+			       	 	<Item
+			            	nome="Cheirinho bom"
+							id={videoIdC}
+			       	 	/>
+		       	 	</a>
+		       	</div>
+		        <div className="Itens">
+		       	 	<a onClick={this.onChangeVideoD}>
+			       	 	<Item
+			            	nome="Cheirinho bom"
+							id={videoIdD}
+			       	 	/>
+		       	 	</a>
+		       	</div>
+			</div>
 
 	    </div>
     );

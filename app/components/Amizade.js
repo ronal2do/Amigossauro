@@ -82,16 +82,17 @@ class Amizade extends React.Component {
             titulo="Era da Amizade"
             src="amizade"
           >
-            <p className="Azul">Na imaginação das crianças sempre existe um mundo de fantasias. <br />
+            <p className="Azul">Na imaginação das crianças sempre existe <br /> um mundo de fantasias. <br />
               Então, na era da amizade, o <strong>Amigossauro</strong> vem para tornar esse mundo mais divertido e colorido. <br />
               Vamos conhecer todos os integrantes dessa turminha e saber qual é o seu preferido: o <strong>Dim</strong>, a <strong>Dana</strong>, o <strong>Deco</strong> ou todos!</p>
           </Box>
           <Card 
               titulo="Dim"
               src="dim"
+              style={{paddingTop:'30px'}}
           >
             <p className="Paragrafo">
-              O Dim é um dinossauro grandalhão, forte e muito amigo de todos.<br /> 
+              O Dim é um dinossauro grandalhão,<br /> forte e muito amigo de todos.<br /> 
               Meio desastrado e atrapalhado, ele adora dançar, brincar e cantar, principalmente em sua casinha, uma caverna no meio da floresta.<br />
               Basta rugir que o Dim aparece para se divertir com todo mundo.<br /> 
               <strong>
@@ -105,10 +106,10 @@ class Amizade extends React.Component {
           >
             <p className="Paragrafo">
               A menininha da turma.<br/>
-              Doce e muito risonha, a Dana, meiga como sempre, adora cuidar de sua casa que é uma fofura.<br/>
+              Doce e muito risonha, a Dana,<br/> meiga como sempre, adora cuidar de sua casa que é uma fofura.<br/>
               Ela mora num docinho de festa... que delícia!
               Venha se divertir com a Dana!<br/>
-              Com ela, sorriso e alegria não vão faltar...  <strong>
+              Com ela, sorriso e alegria não vão faltar...  <strong><br />
               hi hi hi!
               </strong>
             </p>
@@ -118,8 +119,8 @@ class Amizade extends React.Component {
               src="deco"
           >
             <p className="Paragrafo">
-              Se você é criativo, com certeza, o Deco é o que mais se identifica com seu estilo.<br /> 
-              Ele é um dinossauro desbravador e muito inteligente.<br /> 
+              Se você é criativo, com certeza, o Deco é o <br/>que mais se identifica com seu estilo.<br /> 
+              Ele é um dinossauro desbravador<br />  e muito inteligente.<br /> 
               Sua casa, no alto de uma árvore, é também uma oficina onde ele constrói várias coisas legais.<br />
               O <strong>toc-toc</strong> do martelo é seu barulho preferido.<br /> 
               Junte-se ao Deco e descubra um mundo cheio de curiosidades.

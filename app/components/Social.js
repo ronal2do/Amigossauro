@@ -14,23 +14,23 @@ class Social extends React.Component {
 		      	/>
 	      	</span>
 	    </a>
-		<a href="https://www.youtube.com/channel/UCnBPgN6OQ1zkbYq1JAl9h2Q" target="_blank">
-	      	<span>
-			     <FontAwesome
-			        className='fa-fw Icone Icone-instagram'
-			        name='instagram'
-			        size='2x'
-			    />  
-			</span>
-	    </a>
 		<a href="https://www.instagram.com/amigossauro/" target="_blank">      
 		  	<span>
 			  	<FontAwesome
-			        className='fa-fw Icone Icone-youtube'
-			        name='youtube'
+			        className='fa-fw Icone Icone-instagram'
+			        name='instagram'
 			        size='2x'
 		      	/>
 		  </span>
+	    </a>
+	    <a href="https://www.youtube.com/channel/UCnBPgN6OQ1zkbYq1JAl9h2Q" target="_blank">
+	      	<span>
+			     <FontAwesome
+			        className='fa-fw Icone Icone-youtube'
+			        name='youtube'
+			        size='2x'
+			    />  
+			</span>
 	    </a>
       </div>
     );

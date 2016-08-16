@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { logout } from '../../actions/auth';
 
 import Social from '../Social';
-import Box from '../Box';
+import Box from './Box';
 import CardsGrid from './CardsGrid';
 import Newsletter from '../Newsletter/Newsletter';
 
@@ -86,7 +86,10 @@ class Downloads extends React.Component {
             titulo="Downloads"
             src="home"
           >
-            <p className="Azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque! </p></Box>
+            <p className="Azul">Essa turma jurássica não está só em vídeos. Ela faz parte de todo o mundo infantil: pintura, montagens, jogos e música. <br />
+              Cadastre e baixe já os nossos arquivos e chame a criançada para se divertir com o <strong>Amigossauro</strong>. <br />
+              E o melhor: é tudo gratuito!</p>
+          </Box>
         </div>
         <CardsGrid />
         <div className="row">

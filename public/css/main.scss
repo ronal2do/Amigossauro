@@ -60,7 +60,7 @@ body {
   background-color: #fff;
   background-image: url(../images/bg.png);
   background-repeat: repeat;
-  font-size: 13.75px;
+  font-size: 14px;
 }
 
 footer {
@@ -323,7 +323,7 @@ h5{
 }
 h1{
   font-family: 'DaftBrush';
-  font-size: 44px;
+  font-size: 50px;
 }
 .Dim{
   background-color: $azul-claro;
@@ -487,6 +487,7 @@ h1{
 .Newsletter-titulo{
   text-transform: none;
   font-size: 2.5em;
+  padding-top: 30px;
   color: $azul-escuro;
 }
 strong{
@@ -589,7 +590,6 @@ select#cidade {
 
 .Paragrafo{
   text-align: center;
-  padding-top: 10px;
 }
 
 .owl-next {

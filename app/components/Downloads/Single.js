@@ -90,15 +90,15 @@ class Single extends React.Component {
             <p className="Azul">123 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque! </p></Box>
         </div>
         <Card
-            titulo="Jogos"
-            texto="Lorem ipsum dolor sit amet."
+            titulo="Primeiro jogo"
+            texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
             src="jogos"
         >
           <Baixar file="1" />
         </Card>
         <Card
-            titulo="Jogos"
-            texto="Lorem ipsum dolor sit amet."
+            titulo="Segundo Jogo"
+            texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
             src="jogos"
         >
           <Baixar file="1" />

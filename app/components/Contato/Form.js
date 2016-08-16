@@ -40,7 +40,7 @@ class Form extends React.Component {
                     <textarea name="message" placeholder="Messagem :" ref="message" id="message" rows="7" className="form-control contato" value={this.state.message} onChange={this.handleChange}></textarea>
                 </div>
                 <div className="form-group">
-                    <Submit texto="Enviar" classe="contato"/>
+                    <Submit texto="Enviar" classe="newsletter"/>
                 </div>
               </form>
     );

@@ -5854,7 +5854,7 @@ body {
   background-color: #fff;
   background-image: url(../images/bg.png);
   background-repeat: repeat;
-  font-size: 13.75px; }
+  font-size: 14px; }
 
 footer {
   position: absolute;
@@ -6059,7 +6059,7 @@ h5 {
 
 h1 {
   font-family: 'DaftBrush';
-  font-size: 44px; }
+  font-size: 50px; }
 
 .Dim {
   background-color: #c7f3f4;
@@ -6215,6 +6215,7 @@ h1 {
 .Newsletter-titulo {
   text-transform: none;
   font-size: 2.5em;
+  padding-top: 30px;
   color: #0270ab; }
 
 strong {
@@ -6310,8 +6311,7 @@ select#cidade {
   -ms-transform: translate3d(0, 0, 0); }
 
 .Paragrafo {
-  text-align: center;
-  padding-top: 10px; }
+  text-align: center; }
 
 .owl-next {
   float: right;

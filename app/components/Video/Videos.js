@@ -62,7 +62,7 @@ export default class Videos extends React.Component {
 
 			<div className="owl-carousel" style={{padding:'25px 25px 0px'}}>
 			    <div className="Itens">
-		       	 	<a onClick={this.onChangeVideoF}>
+		       	 	<a href onClick={this.onChangeVideoF}>
 			       	 	<Item
 			            	nome="Hora de dormir"
 							id={videoIdF}
@@ -70,7 +70,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 		       	<div className="Itens">
-		       	 	<a onClick={this.onChangeVideoE}>
+		       	 	<a href onClick={this.onChangeVideoE}>
 			       	 	<Item
 			            	nome="Hora de dormir"
 							id={videoIdE}
@@ -78,7 +78,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 		       	<div className="Itens">
-		       		<a onClick={this.onChangeVideo}>
+		       		<a href onClick={this.onChangeVideo}>
 			       	 	<Item
 			            	nome="Amigossauro"
 							id={videoIdA}
@@ -86,7 +86,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 		       	<div className="Itens"> 
-		       	 	<a onClick={this.onChangeVideoB}>
+		       	 	<a href onClick={this.onChangeVideoB}>
 			       	 	<Item
 			            	nome="Você parece um dinossauro"
 							id={videoIdB}
@@ -94,7 +94,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 		       	<div className="Itens">
-		       	 	<a onClick={this.onChangeVideoC}>
+		       	 	<a href onClick={this.onChangeVideoC}>
 			       	 	<Item
 			            	nome="Cheirinho bom"
 							id={videoIdC}
@@ -102,7 +102,7 @@ export default class Videos extends React.Component {
 		       	 	</a>
 		       	</div>
 		        <div className="Itens">
-		       	 	<a onClick={this.onChangeVideoD}>
+		       	 	<a href onClick={this.onChangeVideoD}>
 			       	 	<Item
 			            	nome="Cheirinho bom"
 							id={videoIdD}

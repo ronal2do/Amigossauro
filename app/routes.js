@@ -10,7 +10,6 @@ import HomeDash from './components/Dashboard/Home';
 import Downloads from './components/Downloads/Index';
 import Jogos from './components/Downloads/Single';
 import Colorir from './components/Downloads/Colorir';
-import Blog from './components/Blog/Index';
 import Single from './components/Blog/Single';
 import NotFound from './components/NotFound';
 import Login from './components/Account/Login';
@@ -44,9 +43,8 @@ export default function getRoutes(store) {
         <Route path="/contato" component={Contact} onLeave={clearMessages}/>
         <Route path="/amizade" component={Amizade} onLeave={clearMessages}/>
         <Route path="/downloads" component={Downloads} onLeave={clearMessages}/>
-        <Route path="/downloads/jogos" component={Jogos} onLeave={clearMessages}/>
+        <Route path="/downloads/papertoy" component={Jogos} onLeave={clearMessages}/>
         <Route path="/downloads/colorir" component={Colorir} onLeave={clearMessages}/>
-        <Route path="/blog" component={Blog} onLeave={clearMessages}/>
         <Route path="blog/single" component={Single} onLeave={clearMessages}/>
         <Route path="/login" component={Login} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
         <Route path="/signup" component={Signup} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>

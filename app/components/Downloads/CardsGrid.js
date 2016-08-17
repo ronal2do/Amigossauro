@@ -18,7 +18,7 @@ class CardsGrid extends React.Component {
 		            </Card>
 	            </Link>
 				
-				<Link to="/downloads/jogos">
+				<Link to="/downloads/papertoy">
 		            <Card 
 		                titulo="Paper Toys"
 		                texto="Lorem ipsum dolor sit amet."
@@ -26,6 +26,27 @@ class CardsGrid extends React.Component {
 		            >
 		            </Card>
 	            </Link>
+
+	            <a href="/downloads/letras">
+		            <Card 
+		                titulo="Letras"
+		                texto="Lorem ipsum dolor sit amet."
+		                src="letras"
+		              >
+		            </Card>
+	            </a>
+				
+				<a href="/downloads/jogos">
+		            <Card 
+		                titulo="Jogos"
+		                texto="Lorem ipsum dolor sit amet."
+		                src="jogos"
+		            >
+		            </Card>
+	            </a>
+
+
+
         </div>
 		);
     }

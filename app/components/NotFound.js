@@ -10,7 +10,7 @@ const NotFound = (props) => {
       	com muito carinho e está ficando demais. <br/>
       	Em breve, teremos novidades incríveis por aqui.
       </p>
-      <img src="./images/404.png" alt="404" className="img-responsive" />
+      <img src="/images/404.png" alt="404" className="img-responsive" />
     </div>
   );
 };

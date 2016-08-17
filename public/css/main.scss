@@ -382,7 +382,7 @@ h1{
       background: #1085bc;
       background-image: url(../images/header-mob.png);
       background-size: cover;
-      background-position: center center;
+      background-position: center bottom;
       color: white;
       text-align: center;
     }
@@ -644,3 +644,16 @@ select#cidade {
         margin-left: -25px;
     }
 }
+@media only screen and (min-width: 1468px) {
+    .static {
+      padding: 10em 0 30em;
+      background-position: center center;
+    }   
+}
+@media only screen and (min-width: 1868px) {
+    .static {
+       padding: 10em 0 40em;
+       background-position: center center;
+    }   
+}
+

@@ -199,7 +199,7 @@ function signIn({ token, user, window, interval, dispatch }) {
       user: user
     });
     cookie.save('token', token, { expires: moment().add(1, 'hour').toDate() });
-    browserHistory.push('/downloads/jogos');
+    browserHistory.push('/downloads/colorir');
     resolve({ window: window, interval: interval });
   });
 

@@ -87,21 +87,21 @@ class Single extends React.Component {
             titulo="Jogos"
             src="jogos"
           >
-            <p className="Azul">123 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dolorem quo nemo illum amet molestiae accusantium suscipit, sed eligendi est, possimus incidunt totam officia non! Reprehenderit, in at saepe itaque! </p></Box>
+            <p className="Azul">Reprehenderit, in at saepe itaque! </p></Box>
         </div>
         <Card
             titulo="Primeiro jogo"
             texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
             src="jogos"
         >
-          <Baixar file="1" />
+          <Baixar file="dana" />
         </Card>
         <Card
             titulo="Segundo Jogo"
             texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
             src="jogos"
         >
-          <Baixar file="1" />
+          <Baixar file="dim" />
         </Card>
         <div className="row">
           <Newsletter className="col-sm-12" style={{padding:'0px'}}/>

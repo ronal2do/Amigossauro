@@ -33,7 +33,9 @@ class Baixar extends React.Component {
             </a>
       </p>
     ) : (
-       <button onClick={this.handleFacebook} className="btn btn-facebook">Baixar via Facebook</button>
+      <p><br />
+        <button onClick={this.handleFacebook} className="btn btn-facebook">Baixar via Facebook</button>
+      </p>
     );
 
     return (

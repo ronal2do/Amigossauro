@@ -3,6 +3,7 @@ import { IndexRoute, Route } from 'react-router';
 import App from './components/App';
 import Site from './components/Site';
 import Home from './components/Home';
+import Politica from './components/Politica';
 import Contact from './components/Contact';
 import Amizade from './components/Amizade';
 import HomeDash from './components/Dashboard/Home';
@@ -52,9 +53,9 @@ export default function getRoutes(store) {
         <Route path="/account" component={Profile} onEnter={ensureAuthenticated} onLeave={clearMessages}/>
         <Route path="/forgot" component={Forgot} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
         <Route path='/reset/:token' component={Reset} onEnter={skipIfAuthenticated} onLeave={clearMessages}/>
+        <Route path="/politicas" component={Politica} onLeave={clearMessages}/>
+        <Route path="*" component={NotFound} onLeave={clearMessages}/>
       </Route>
-
-      <Route path="*" component={NotFound} onLeave={clearMessages}/>
     </Route>
   );
 }

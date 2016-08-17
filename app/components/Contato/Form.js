@@ -29,20 +29,20 @@ class Form extends React.Component {
 
   render() {
     return (
-              <form onSubmit={this.handleSubmit} className="form-horizontal">
-                <div className="form-group">
-                    <input type="text" name="name" placeholder="Name :" ref="name" id="name" className="form-control contato" value={this.state.name} onChange={this.handleChange} autoFocus/>
-                </div>
-                <div className="form-group">
-                    <input type="email" name="email" placeholder="Email :" ref="email" id="email" className="form-control contato" value={this.state.email} onChange={this.handleChange}/>
-                </div>
-                <div className="form-group">
-                    <textarea name="message" placeholder="Messagem :" ref="message" id="message" rows="7" className="form-control contato" value={this.state.message} onChange={this.handleChange}></textarea>
-                </div>
-                <div className="form-group">
-                    <Submit texto="Enviar" classe="newsletter"/>
-                </div>
-              </form>
+        <form onSubmit={this.handleSubmit} className="form-horizontal">
+          <div className="form-group">
+              <input type="text" name="name" placeholder="Name :" ref="name" id="name" className="form-control contato" value={this.state.name} onChange={this.handleChange} autoFocus/>
+          </div>
+          <div className="form-group">
+              <input type="email" name="email" placeholder="Email :" ref="email" id="email" className="form-control contato" value={this.state.email} onChange={this.handleChange}/>
+          </div>
+          <div className="form-group">
+              <textarea name="message" placeholder="Mensagem :" ref="message" id="message" rows="7" className="form-control contato" value={this.state.message} onChange={this.handleChange}></textarea>
+          </div>
+          <div className="form-group">
+              <Submit texto="Enviar" classe="newsletter"/>
+          </div>
+        </form>
     );
   }
 }

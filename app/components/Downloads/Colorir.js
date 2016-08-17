@@ -78,9 +78,9 @@ class Colorir extends React.Component {
 
   render() {
     const Botoes = [
-      {file:"colorir_deco",name:"Colorir Deco",src:"deco"},
-      {file:"colorir_dana",name:"Colorir Dana",src:"dana"},
-      {file:"colorir_dim",name:"Colorir Dim",src:"dim"}
+      {file:"colorir_deco",name:"Colorir Deco",src:"circulo-deco"},
+      {file:"colorir_dana",name:"Colorir Dana",src:"circulo-dana"},
+      {file:"colorir_dim",name:"Colorir Dim",src:"circulo-dim"}
     ].map((Botoes, i) =>  
         <Card 
           key={i}

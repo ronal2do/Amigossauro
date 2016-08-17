@@ -101,7 +101,10 @@ class Single extends React.Component {
             titulo="Paper Toys"
             src="papertoy"
           >
-            <p className="Azul">Divirta-se com seus filhos.</p></Box>
+            <p className="Azul"> 
+             Agora você poder brincar com os três dinossauros mais animados do planeta! Se cadastre, faça o download do Paper Toy, siga as instruções de montagem e se divirta pra valer com o Dim, a Dana e o Deco.
+            </p>
+          </Box>
         </div>
         <div className="row">
        {Botoes}

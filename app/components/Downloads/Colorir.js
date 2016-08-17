@@ -101,7 +101,11 @@ class Colorir extends React.Component {
             titulo="para Colorir"
             src="colorir"
           >
-            <p className="Azul">Divirta-se com seus filhos. </p></Box>
+            <p className="Azul">
+            Nossa turminha vive em um mundo bem colorido e agora vocês podem deixá-lo com as cores que mais gostam. 
+            É só baixar os desenhos aqui, usar a criatividade e colorir o mundo do Amigossauro do jeitinho que quiserem.
+            </p>
+          </Box>
         </div>
         <div className="row">
        {Botoes}

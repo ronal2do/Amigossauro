@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { logout } from '../../actions/auth';
 
 import Social from '../Social';
-import Box from '../Box';
+import Box from './Box';
 import Card from './Cards-old';
 import Newsletter from '../Newsletter/Newsletter';
 import Baixar from '../Account/Baixar';
@@ -77,6 +77,20 @@ class Single extends React.Component {
   }
 
   render() {
+    const Botoes = [
+      {file:"papertoy_deco",name:"Paper Toy Deco",src:"Deco"},
+      {file:"papertoy_dana",name:"Paper Toy Dana",src:"Dana"},
+      {file:"papertoy_dim",name:"Paper Toy Dim",src:"Dim"}
+    ].map((Botoes, i) =>  
+        <Card 
+          key={i}
+          titulo={Botoes.name}
+          texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
+          src={Botoes.src}
+        >
+          <Baixar file={Botoes.file} />
+        </Card>);
+
     return (
       <div className="container">
         <div className="pull-right"> 
@@ -84,25 +98,14 @@ class Single extends React.Component {
         </div>
         <div className="row">
           <Box 
-            titulo="Jogos"
-            src="jogos"
+            titulo="Paper Toys"
+            src="papertoy"
           >
-            <p className="Azul">Reprehenderit, in at saepe itaque! </p></Box>
+            <p className="Azul">Divirta-se com seus filhos.</p></Box>
         </div>
-        <Card
-            titulo="Primeiro jogo"
-            texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
-            src="jogos"
-        >
-          <Baixar file="dana" />
-        </Card>
-        <Card
-            titulo="Segundo Jogo"
-            texto="Lorem ipsum dolor sit amet lorem ipsum dolor sit amet."
-            src="jogos"
-        >
-          <Baixar file="dim" />
-        </Card>
+        <div className="row">
+       {Botoes}
+      </div>
         <div className="row">
           <Newsletter className="col-sm-12" style={{padding:'0px'}}/>
         </div>

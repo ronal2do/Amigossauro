@@ -9,13 +9,12 @@ class CardsGrid extends React.Component {
         return (
         	<div className="row">
         		
-				<Link to="/downloads/jogos">
+				<Link to="/downloads/colorir">
 		            <Card 
 		                titulo="Para Colorir"
 		                texto="Lorem ipsum dolor sit amet."
 		                src="colorir"
 		              >
-		                  <Baixar file="1"/>
 		            </Card>
 	            </Link>
 				
@@ -25,7 +24,6 @@ class CardsGrid extends React.Component {
 		                texto="Lorem ipsum dolor sit amet."
 		                src="paper"
 		            >
-		                <Baixar file="1"/>
 		            </Card>
 	            </Link>
         </div>

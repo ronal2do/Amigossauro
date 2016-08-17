@@ -98,7 +98,7 @@ app.use(function(req, res, next) {
   }
 });
 
-if (app.get('env') === 'development') {
+if (app.get('env') === 'production') {
   app.use(require('webpack-hot-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath

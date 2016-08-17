@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import Messages from './Messages';
 import Social from './Social';
 import Newsletter from './Newsletter/Newsletter';
 import Frase from './Video/Frase';
@@ -14,7 +12,7 @@ import BoxContato from './Contato/BoxContato';
     fontSize:'1.2em'
   };
 
-class Contact extends React.Component {
+export default class Contact extends React.Component {
 
   componentDidMount() {
       window.requestAnimFrame = (function(){
@@ -78,7 +76,6 @@ class Contact extends React.Component {
       scrollToY(475, 1500, 'easeInOutQuint');
   }
 
-
   render() {
     return (
       <div className="container">
@@ -86,8 +83,8 @@ class Contact extends React.Component {
               <Social />
           </div>
           <div className="row">
-              <Messages messages={this.props.messages}/>
               <BoxContato titulo="Contato">
+                  
                   <p className="Azul" style={p}>
                     Dim, Dana e Deco estão aqui querendo saber a opinião de vocês.
                   </p>
@@ -107,11 +104,3 @@ class Contact extends React.Component {
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    messages: state.messages
-  };
-};
-
-export default connect(mapStateToProps)(Contact);

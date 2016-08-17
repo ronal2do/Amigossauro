@@ -8,7 +8,7 @@ class BoxContato extends React.Component {
       <div>
         <div className="col-sm-12">
       		<div className="Padding-top"></div>
-       		<div className="col-sm-5">
+       		<div className="col-sm-5 Box">
               <h1> {this.props.titulo} </h1>
                   {this.props.children}
        		</div>

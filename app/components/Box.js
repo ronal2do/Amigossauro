@@ -6,7 +6,7 @@ class Box extends React.Component {
     return (
       <div className="col-sm-12">
         <div className="Padding-top"></div>
-          <div className="col-sm-8">
+          <div className="col-sm-8 Box">
             <h1> {this.props.titulo} </h1>
                   {this.props.children}
             <Linha />

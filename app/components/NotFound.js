@@ -1,4 +1,5 @@
 import React from 'react';
+import Social from './Social';
 
 export default class NotFound extends React.Component {
 
@@ -74,6 +75,9 @@ export default class NotFound extends React.Component {
   render(){
     return (
       <div className="container text-center">
+        <div className="pull-right"> 
+          <Social />
+        </div>
        <br/> <br/>
         <h1 style={{color:'rgb(176,47,130)'}}>404</h1>
         <p className="Frase-youtube" style={{color:'rgb(176,47,130)',fontFamily:'AvenirNext-Medium',fontSize:'1.2em'}}>

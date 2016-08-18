@@ -78,7 +78,6 @@ class Downloads extends React.Component {
           scrollToY(475, 1500, 'easeInOutQuint');
           console.log('media 400px');
       }
-      
   }
 
   render() {

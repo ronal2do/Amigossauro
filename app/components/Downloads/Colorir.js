@@ -14,6 +14,7 @@ import Baixar from '../Account/Baixar';
 
 class Colorir extends React.Component {
   
+
   componentDidMount() {
       window.requestAnimFrame = (function(){
         return  window.requestAnimationFrame       ||
@@ -69,13 +70,20 @@ class Colorir extends React.Component {
                   window.scrollTo(0, scrollTargetY);
               }
           }
-
           // call it once to get started
           tick();
       }
-      scrollToY(475, 1500, 'easeInOutQuint');
-  }
 
+      if (window.matchMedia("(min-width: 1468px)").matches)  {
+          scrollToY(675, 1500, 'easeInOutQuint');
+          console.log('media 1468px');
+      } else {
+          scrollToY(475, 1500, 'easeInOutQuint');
+          console.log('media 400px');
+      }
+      
+  }
+  
   render() {
     const Botoes = [
       {file:"colorir_deco",name:"Colorir Deco",src:"circulo-deco"},

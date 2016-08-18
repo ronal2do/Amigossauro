@@ -31,7 +31,7 @@ class Form extends React.Component {
     return (
         <form onSubmit={this.handleSubmit} className="form-horizontal">
           <div className="form-group">
-              <input type="text" name="name" placeholder="Name :" ref="name" id="name" className="form-control contato" value={this.state.name} onChange={this.handleChange} autoFocus/>
+              <input type="text" name="name" placeholder="Nome :" ref="name" id="name" className="form-control contato" value={this.state.name} onChange={this.handleChange} autoFocus/>
           </div>
           <div className="form-group">
               <input type="email" name="email" placeholder="Email :" ref="email" id="email" className="form-control contato" value={this.state.email} onChange={this.handleChange}/>

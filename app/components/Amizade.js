@@ -67,7 +67,15 @@ class Amizade extends React.Component {
           // call it once to get started
           tick();
       }
-      scrollToY(475, 1500, 'easeInOutQuint');
+
+      if (window.matchMedia("(min-width: 1468px)").matches)  {
+          scrollToY(675, 1500, 'easeInOutQuint');
+          console.log('media 1468px');
+      } else {
+          scrollToY(475, 1500, 'easeInOutQuint');
+          console.log('media 400px');
+      }
+      
   }
 
   render() {

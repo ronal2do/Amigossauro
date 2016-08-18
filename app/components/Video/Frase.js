@@ -10,7 +10,7 @@ export default class Frase extends React.Component {
 			</div>
 			<div className="col-sm-6 Frase-youtube">
 				<a href="https://www.youtube.com/channel/UCnBPgN6OQ1zkbYq1JAl9h2Q" target="_blank">
-					<img src="./images/visitecanal.png" alt="404" className="img-responsive" style={{marginTop: '-30px'}}/>
+					<img src="./images/visitecanal.png" alt="404" className="img-responsive marginTop"/>
 				</a>
 			</div>
 			<div className="col-sm-3">

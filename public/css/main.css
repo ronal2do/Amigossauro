@@ -6327,6 +6327,8 @@ select#cidade {
   padding: 15px 25px 0px; }
 
 @media only screen and (min-width: 768px) {
+  .marginTop {
+    margin-top: -30px; }
   .Box {
     margin-bottom: 4em; }
   .Itens {

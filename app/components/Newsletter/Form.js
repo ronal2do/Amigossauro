@@ -45,7 +45,7 @@ class Form extends React.Component {
   }
 
   validarNome(event){
-      const validarNome = /^[a-záàâãéèêíïóôõöúçñ ]+$/;
+      const validarNome = /^[A-ZÉÚÍÓÁÈÙÌÒÀÕÃÑÊÛÎÔÂËYÜÏÖÄ]{1}[a-zéúíóáèùìòàõãñêûîôâëyüïöä]+( [A-ZÉÚÍÓÁÈÙÌÒÀÕÃÑÊÛÎÔÂËYÜÏÖÄ]{1}[a-zéúíóáèùìòàõãñêûîôâëyüïöä]+){1,3}$/;
       if (validarNome.test(event.target.value) === false  || event.target.value == ''){
           console.log(event.target.value);
           console.log('inválido');
@@ -102,7 +102,7 @@ class Form extends React.Component {
                       id="email"
                       onBlur={this.validarEmail}
                       valor={"email"}
-                      placeholder={"E-mail: "}
+                      placeholder={"Email: "}
                       value={this.state.email} 
                       onChange={this.handleChange}
                     />

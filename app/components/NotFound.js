@@ -78,7 +78,7 @@ export default class NotFound extends React.Component {
         <div className="pull-right"> 
           <Social />
         </div>
-       <br/> <br/>
+       <br/> <br/><br/><br/>
         <h1 style={{color:'rgb(176,47,130)'}}>404</h1>
         <p className="Frase-youtube" style={{color:'rgb(176,47,130)',fontFamily:'AvenirNext-Medium',fontSize:'1.2em'}}>
         	Esta página está sendo construída <br/> 

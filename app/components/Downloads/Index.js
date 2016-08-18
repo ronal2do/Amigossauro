@@ -10,7 +10,7 @@ import CardsGrid from './CardsGrid';
 import Newsletter from '../Newsletter/Newsletter';
 
 class Downloads extends React.Component {
-  
+
   componentDidMount() {
       window.requestAnimFrame = (function(){
         return  window.requestAnimationFrame       ||
@@ -103,7 +103,7 @@ class Downloads extends React.Component {
       </div>
     );
   }
-  
+
 }
 
 const mapStateToProps = (state) => {

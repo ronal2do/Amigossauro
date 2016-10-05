@@ -3,7 +3,7 @@ import React from 'react';
 import Item from './Item';
 import Video from './Video';
 
-  	const videoIdA = "VadjvlvBDxE";
+  const videoIdA = "VadjvlvBDxE";
 	const videoIdB = "VVS2tqpXiZ0";
 	const videoIdC = "c_yomf6U35A";
 	const videoIdD = "WIksma_8Ka4";
@@ -28,28 +28,28 @@ export default class Videos extends React.Component {
   }
 
   onChangeVideo(e) {
-	e.preventDefault()
-	this.setState({videoId: videoIdA + AUTOPLAY})
+  	e.preventDefault()
+  	this.setState({videoId: videoIdA + AUTOPLAY})
   }
   onChangeVideoB(e) {
-	e.preventDefault()
-	this.setState({videoId: videoIdB + AUTOPLAY})
+  	e.preventDefault()
+  	this.setState({videoId: videoIdB + AUTOPLAY})
   }
   onChangeVideoC(e) {
-	e.preventDefault()
-	this.setState({videoId: videoIdC + AUTOPLAY})
+  	e.preventDefault()
+  	this.setState({videoId: videoIdC + AUTOPLAY})
   }
   onChangeVideoD(e) {
-	e.preventDefault()
-	this.setState({videoId: videoIdD + AUTOPLAY})
+  	e.preventDefault()
+  	this.setState({videoId: videoIdD + AUTOPLAY})
   }
   onChangeVideoE(e) {
-	e.preventDefault()
-	this.setState({videoId: videoIdE + AUTOPLAY})
+  	e.preventDefault()
+  	this.setState({videoId: videoIdE + AUTOPLAY})
   }
   onChangeVideoF(e) {
-	e.preventDefault()
-	this.setState({videoId: videoIdF + AUTOPLAY})
+  	e.preventDefault()
+  	this.setState({videoId: videoIdF + AUTOPLAY})
   }
 
   render() {
@@ -89,7 +89,7 @@ export default class Videos extends React.Component {
 		       	 	<a href onClick={this.onChangeVideoB}>
 			       	 	<Item
 			            	nome="Você parece um dinossauro"
-							id={videoIdB}
+							      id={videoIdB}
 			       	 	/>
 		       	 	</a>
 		       	</div>
@@ -97,7 +97,7 @@ export default class Videos extends React.Component {
 		       	 	<a href onClick={this.onChangeVideoC}>
 			       	 	<Item
 			            	nome="Cheirinho bom"
-							id={videoIdC}
+							      id={videoIdC}
 			       	 	/>
 		       	 	</a>
 		       	</div>
@@ -105,7 +105,7 @@ export default class Videos extends React.Component {
 		       	 	<a href onClick={this.onChangeVideoD}>
 			       	 	<Item
 			            	nome="Cheirinho bom"
-							id={videoIdD}
+							      id={videoIdD}
 			       	 	/>
 		       	 	</a>
 		       	</div>

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import 'expose?$!expose?jQuery!jquery';
-
 import Item from './Item';
 import Video from './Video';
 
@@ -54,7 +52,7 @@ export default class Videos extends React.Component {
 	this.setState({videoId: videoIdF + AUTOPLAY})
   }
 
-  render() {    	
+  render() {
     return (
 	    <div className="col-sm-12 text-center Azul">
 
@@ -84,15 +82,15 @@ export default class Videos extends React.Component {
 			       	 	<Item
 			            	nome="Amigossauro"
 							id={videoIdA}
-			       	 	/>	
+			       	 	/>
 		       	 	</a>
 		       	</div>
-		       	<div className="Itens"> 
+		       	<div className="Itens">
 		       	 	<a href onClick={this.onChangeVideoB}>
 			       	 	<Item
 			            	nome="Você parece um dinossauro"
 							id={videoIdB}
-			       	 	/>	
+			       	 	/>
 		       	 	</a>
 		       	</div>
 		       	<div className="Itens">

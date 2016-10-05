@@ -1,5 +1,7 @@
 import React from 'react';
 
+import 'expose?$!expose?jQuery!jquery';
+
 import Item from './Item';
 import Video from './Video';
 

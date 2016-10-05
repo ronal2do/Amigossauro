@@ -34,7 +34,7 @@ exports.contactPost = function(req, res) {
 
   var mailOptions = {
     from: req.body.name + ' ' + '<'+ req.body.email + '>',
-    to: 'ronal2do@gmail.com',
+    to: 'ola@amigossauro.com.br',
     subject: 'Contato do site Amigossauro',
     text: req.body.message
   };

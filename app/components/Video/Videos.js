@@ -8,7 +8,8 @@ import Video from './Video';
 	const videoIdC = "c_yomf6U35A";
 	const videoIdD = "WIksma_8Ka4";
 	const videoIdE = "hsfA4kTdltE";
-	const videoIdF = "bgVz5fJeI40";
+  const videoIdF = "bgVz5fJeI40";
+	const videoIdG = "nmw6nnQ9OnU";
 	const AUTOPLAY = "?autoplay=1";
 
 export default class Videos extends React.Component {
@@ -25,6 +26,7 @@ export default class Videos extends React.Component {
     this.onChangeVideoD = this.onChangeVideoD.bind(this);
     this.onChangeVideoE = this.onChangeVideoE.bind(this);
     this.onChangeVideoF = this.onChangeVideoF.bind(this);
+    this.onChangeVideoG = this.onChangeVideoG.bind(this);
   }
 
   onChangeVideo(e) {
@@ -51,6 +53,10 @@ export default class Videos extends React.Component {
   	e.preventDefault()
   	this.setState({videoId: videoIdF + AUTOPLAY})
   }
+  onChangeVideoG(e) {
+  	e.preventDefault()
+  	this.setState({videoId: videoIdG + AUTOPLAY})
+  }
 
   render() {
     return (
@@ -61,11 +67,19 @@ export default class Videos extends React.Component {
 			<Video videoId={this.state.videoId} />
 
 			<div className="owl-carousel" style={{padding:'25px 25px 0px'}}>
-			    <div className="Itens">
+            <div className="Itens">
+              <a href onClick={this.onChangeVideoG}>
+                <Item
+                    nome="Dia de chuva"
+                    id={videoIdG}
+                />
+              </a>
+            </div>
+            <div className="Itens">
 		       	 	<a href onClick={this.onChangeVideoF}>
 			       	 	<Item
 			            	nome="Hora de dormir"
-							id={videoIdF}
+							      id={videoIdF}
 			       	 	/>
 		       	 	</a>
 		       	</div>
@@ -116,4 +130,4 @@ export default class Videos extends React.Component {
   }
 }
 Videos.propTypes = { initial: React.PropTypes.string };
-Videos.defaultProps = { initial: videoIdF };
+Videos.defaultProps = { initial: videoIdG };

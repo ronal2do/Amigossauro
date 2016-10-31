@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 
-class Social extends React.Component {
+class Social extends Component {
   render() {
     return (
-      <div> 
+      <div>
 		<a href="https://www.facebook.com/amigossauro/" target="_blank">
 	      	<span>
 		      	<FontAwesome
@@ -14,7 +14,7 @@ class Social extends React.Component {
 		      	/>
 	      	</span>
 	    </a>
-		<a href="https://www.instagram.com/amigossauro/" target="_blank">      
+		<a href="https://www.instagram.com/amigossauro/" target="_blank">
 		  	<span>
 			  	<FontAwesome
 			        className='fa-fw Icone Icone-instagram'
@@ -23,14 +23,14 @@ class Social extends React.Component {
 		      	/>
 		  </span>
 	    </a>
-	    <a href="https://www.youtube.com/channel/UCnBPgN6OQ1zkbYq1JAl9h2Q" target="_blank">
+	    <a href="https://www.youtube.com/channel/UCnBPgN6OQ1zkbYq1JAl9h2Q?sub_confirmation=1" target="_blank">
 	      	<span>
-			     <FontAwesome
-			        className='fa-fw Icone Icone-youtube'
-			        name='youtube'
-			        size='2x'
-			    />  
-			</span>
+  			     <FontAwesome
+  			        className='fa-fw Icone Icone-youtube'
+  			        name='youtube'
+  			        size='2x'
+  			    />
+			   </span>
 	    </a>
       </div>
     );

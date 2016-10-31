@@ -18,8 +18,13 @@ class Form extends React.Component {
   }
 
   handleSubmit(event) {
+    const { dispatch } = this.props;
     event.preventDefault();
-    this.props.dispatch(submitContactForm(this.state.name, this.state.email, this.state.message));
+    dispatch(submitContactForm(
+      this.state.name,
+      this.state.email,
+      this.state.message
+    ));
     this.setState({ name: '', email: '', message: '' });
   }
 

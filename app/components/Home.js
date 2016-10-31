@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Messages from './Messages';
 import Social from './Social';
@@ -8,16 +8,17 @@ import Box from './Box';
 import Card from './Amizade/Cards';
 import Newsletter from './Newsletter/Newsletter';
 
-class Home extends React.Component {
+class Home extends Component {
   render() {
+    const { messages } = this.props;
     return (
       <div className="container">
-        <Messages messages={this.props.messages}/>
-        <div className="pull-right"> 
+        <Messages messages={messages}/>
+        <div className="pull-right">
           <Social />
         </div>
         <div className="row">
-          <Box 
+          <Box
             titulo="Ruaar!!!"
             src="home"
           >

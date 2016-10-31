@@ -1,28 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { submitNewsletterForm } from '../../actions/newsletter';
 import Messages from '../Messages';
 import Submit from './../Commons/Submit';
 
 
+class Form extends Component {
 
-class Form extends React.Component {
-  
   constructor(props) {
     super(props);
-    this.state = { 
-        nome: '' 
-      , email: '' 
-      , estado: '' 
-      , cidade: '' 
-      , valido: '' 
-      , nvalido: '' 
+    this.state = {
+        nome: ''
+      , email: ''
+      , estado: ''
+      , cidade: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.validarEmail = this.validarEmail.bind(this);
-    this.validarNome  = this.validarNome.bind(this);
   }
 
   handleChange(event) {
@@ -30,63 +25,39 @@ class Form extends React.Component {
   }
 
   componentDidMount() {
-        new dgCidadesEstados({
-          cidade: document.getElementById('cidade'),
-          estado: document.getElementById('estado'),
-          estadoVal: '',
-          cidadeVal: ''
-        })
+    new dgCidadesEstados({
+      cidade: document.getElementById('cidade'),
+      estado: document.getElementById('estado'),
+      estadoVal: '',
+      cidadeVal: ''
+    })
   }
 
   handleSubmit(event) {
+    const { dispatch } = this.props
     event.preventDefault();
-    this.props.dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade));
+    dispatch(submitNewsletterForm(this.state.nome, this.state.email, this.state.estado, this.state.cidade));
     this.setState({ nome: '', email: '', estado: '', cidade: '' });
   }
 
-  validarNome(event){
-      const validarNome = /^[A-ZÉÚÍÓÁÈÙÌÒÀÕÃÑÊÛÎÔÂËYÜÏÖÄ]{1}[a-zéúíóáèùìòàõãñêûîôâëyüïöä]+( [A-ZÉÚÍÓÁÈÙÌÒÀÕÃÑÊÛÎÔÂËYÜÏÖÄ]{1}[a-zéúíóáèùìòàõãñêûîôâëyüïöä]+){1,3}$/;
-      if (validarNome.test(event.target.value) === false  || event.target.value == ''){
-          console.log(event.target.value);
-          console.log('inválido');
-          this.setState({ nvalido: 'error'});
-      } else {
-        console.log('valido');
-        this.setState({ nvalido: ''});
-      }
-  }
-
-  validarEmail(event){
-      const validar = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if (validar.test(event.target.value) === false  || event.target.value == ''){
-          console.log(event.target.value);
-          console.log('inválido');
-          this.setState({ valido: 'error'});
-          //chamar componente de mensagem com a state.meangem
-      } else {
-        console.log('valido');
-        this.setState({ valido: ''});
-        //chamar componente de mensagem com a state.meangem
-      }
-  }
-
   render() {
+    const { messages } = this.props;
+
     return (
           <div className="padding-top">
-            <Messages messages={this.props.messages}/>
+            <Messages messages={ messages }/>
               <form className="form-horizontal" onSubmit={this.handleSubmit}>
                 <div className="form-group">
                   <div className="col-sm-12">
-                    <input 
+                    <input
                       type="text"
                       name="nome"
                       ref="nome"
-                      className={'form-control ' + this.state.nvalido}
+                      className="form-control"
                       id="nome"
-                      onBlur={this.validarNome}
                       valor={"nome"}
                       placeholder={"Nome: "}
-                      value={this.state.nome} 
+                      value={this.state.nome}
                       onChange={this.handleChange}
                     />
                     <small className={'Span' + this.state.nvalido}>Não pode estar em branco</small>
@@ -94,16 +65,15 @@ class Form extends React.Component {
                 </div>
                 <div className={'form-group'}>
                   <div className="col-sm-12">
-                    <input 
+                    <input
                       type="email"
                       name="email"
                       ref="email"
-                      className={'form-control ' + this.state.valido}
+                      className="form-control"
                       id="email"
-                      onBlur={this.validarEmail}
                       valor={"email"}
                       placeholder={"Email: "}
-                      value={this.state.email} 
+                      value={this.state.email}
                       onChange={this.handleChange}
                     />
                     <small className={'Span' + this.state.valido}>Não é um e-mail válido!</small>
@@ -115,7 +85,7 @@ class Form extends React.Component {
                         onChange={this.handleChange}></select>
                     </div>
                     <div className="col-sm-6">
-                      <select name="cidade" id="cidade" className="form-control" 
+                      <select name="cidade" id="cidade" className="form-control"
                         onChange={this.handleChange}></select>
                     </div>
                 </div>

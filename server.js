@@ -65,17 +65,22 @@ var hbs = exphbs.create({
   }
 });
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
 app.use(compression());
-app.use(sass({ src: path.join(__dirname, 'public'), dest: path.join(__dirname, 'public') }));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve static assets
+app.use(express.static(path.resolve(__dirname, '.', 'build')));
+// Always return the main index.html, so react-router render the route in the client
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '.', 'build', 'index.html'));
+});
+
+
 
 app.use(function(req, res, next) {
   req.isAuthenticated = function() {

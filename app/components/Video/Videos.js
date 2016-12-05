@@ -9,7 +9,9 @@ import Video from './Video';
 	const videoIdD = "WIksma_8Ka4";
 	const videoIdE = "hsfA4kTdltE";
   const videoIdF = "bgVz5fJeI40";
-	const videoIdG = "nmw6nnQ9OnU";
+  const videoIdG = "nmw6nnQ9OnU";
+	const videoIdH = "tvZQxAnMrX4";
+
 	const AUTOPLAY = "?autoplay=1";
 
 export default class Videos extends React.Component {
@@ -27,6 +29,7 @@ export default class Videos extends React.Component {
     this.onChangeVideoE = this.onChangeVideoE.bind(this);
     this.onChangeVideoF = this.onChangeVideoF.bind(this);
     this.onChangeVideoG = this.onChangeVideoG.bind(this);
+    this.onChangeVideoH = this.onChangeVideoH.bind(this);
   }
 
   onChangeVideo(e) {
@@ -57,77 +60,86 @@ export default class Videos extends React.Component {
   	e.preventDefault()
   	this.setState({videoId: videoIdG + AUTOPLAY})
   }
+  onChangeVideoH(e) {
+  	e.preventDefault()
+  	this.setState({videoId: videoIdH + AUTOPLAY})
+  }
 
   render() {
     return (
 	    <div className="col-sm-12 text-center Azul">
-
 	    	<h2>{this.props.titulo}</h2>
-	     		{this.props.children}
-			<Video videoId={this.state.videoId} />
-
-			<div className="owl-carousel" style={{padding:'25px 25px 0px'}}>
-            <div className="Itens">
-              <a href onClick={this.onChangeVideoG}>
-                <Item
-                    nome="Dia de chuva"
-                    id={videoIdG}
-                />
-              </a>
-            </div>
-            <div className="Itens">
-		       	 	<a href onClick={this.onChangeVideoF}>
-			       	 	<Item
-			            	nome="Hora de dormir"
-							      id={videoIdF}
-			       	 	/>
-		       	 	</a>
-		       	</div>
-		       	<div className="Itens">
-		       	 	<a href onClick={this.onChangeVideoE}>
-			       	 	<Item
-			            	nome="Hora de dormir"
-							id={videoIdE}
-			       	 	/>
-		       	 	</a>
-		       	</div>
-		       	<div className="Itens">
-		       		<a href onClick={this.onChangeVideo}>
-			       	 	<Item
-			            	nome="Amigossauro"
-							id={videoIdA}
-			       	 	/>
-		       	 	</a>
-		       	</div>
-		       	<div className="Itens">
-		       	 	<a href onClick={this.onChangeVideoB}>
-			       	 	<Item
-			            	nome="Você parece um dinossauro"
-							      id={videoIdB}
-			       	 	/>
-		       	 	</a>
-		       	</div>
-		       	<div className="Itens">
-		       	 	<a href onClick={this.onChangeVideoC}>
-			       	 	<Item
-			            	nome="Cheirinho bom"
-							      id={videoIdC}
-			       	 	/>
-		       	 	</a>
-		       	</div>
-		        <div className="Itens">
-		       	 	<a href onClick={this.onChangeVideoD}>
-			       	 	<Item
-			            	nome="Cheirinho bom"
-							      id={videoIdD}
-			       	 	/>
-		       	 	</a>
-		       	</div>
-			</div>
-
+	     	{this.props.children}
+			  <Video videoId={this.state.videoId} />
+  			<div className="owl-carousel" style={{padding:'25px 25px 0px'}}>
+          <div className="Itens">
+            <a href onClick={this.onChangeVideoH}>
+              <Item
+                  nome="Na era dos Dinossauros"
+                  id={videoIdH}
+              />
+            </a>
+          </div>
+          <div className="Itens">
+            <a href onClick={this.onChangeVideoG}>
+              <Item
+                  nome="Dia de chuva"
+                  id={videoIdG}
+              />
+            </a>
+          </div>
+          <div className="Itens">
+         	 	<a href onClick={this.onChangeVideoF}>
+  	       	 	<Item
+  	            	nome="Hora de dormir"
+  					      id={videoIdF}
+  	       	 	/>
+         	 	</a>
+         	</div>
+         	<div className="Itens">
+         	 	<a href onClick={this.onChangeVideoE}>
+  	       	 	<Item
+  	            	nome="Hora de dormir"
+  					id={videoIdE}
+  	       	 	/>
+         	 	</a>
+         	</div>
+         	<div className="Itens">
+         		<a href onClick={this.onChangeVideo}>
+  	       	 	<Item
+  	            	nome="Amigossauro"
+  					id={videoIdA}
+  	       	 	/>
+         	 	</a>
+         	</div>
+         	<div className="Itens">
+         	 	<a href onClick={this.onChangeVideoB}>
+  	       	 	<Item
+  	            	nome="Você parece um dinossauro"
+  					      id={videoIdB}
+  	       	 	/>
+         	 	</a>
+         	</div>
+         	<div className="Itens">
+         	 	<a href onClick={this.onChangeVideoC}>
+  	       	 	<Item
+  	            	nome="Cheirinho bom"
+  					      id={videoIdC}
+  	       	 	/>
+         	 	</a>
+         	</div>
+          <div className="Itens">
+         	 	<a href onClick={this.onChangeVideoD}>
+  	       	 	<Item
+  	            	nome="Cheirinho bom"
+  					      id={videoIdD}
+  	       	 	/>
+         	 	</a>
+         	</div>
+  			</div>
 	    </div>
     );
   }
 }
 Videos.propTypes = { initial: React.PropTypes.string };
-Videos.defaultProps = { initial: videoIdG };
+Videos.defaultProps = { initial: videoIdH };

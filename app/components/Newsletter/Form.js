@@ -52,15 +52,11 @@ class Form extends Component {
                     <input
                       type="text"
                       name="nome"
-                      ref="nome"
                       className="form-control"
-                      id="nome"
-                      valor={"nome"}
-                      placeholder={"Nome: "}
+                      placeholder="Nome: "
                       value={this.state.nome}
                       onChange={this.handleChange}
                     />
-                    <small className={'Span' + this.state.nvalido}>Não pode estar em branco</small>
                   </div>
                 </div>
                 <div className={'form-group'}>
@@ -68,15 +64,11 @@ class Form extends Component {
                     <input
                       type="email"
                       name="email"
-                      ref="email"
                       className="form-control"
-                      id="email"
-                      valor={"email"}
-                      placeholder={"Email: "}
+                      placeholder="Email: "
                       value={this.state.email}
                       onChange={this.handleChange}
                     />
-                    <small className={'Span' + this.state.valido}>Não é um e-mail válido!</small>
                   </div>
                 </div>
                 <div className="form-group">

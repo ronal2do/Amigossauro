@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var logger = require('morgan');
 var compression = require('compression');
 var cookieParser = require('cookie-parser');
@@ -35,6 +36,8 @@ var userController = require('./controllers/user');
 var contactController = require('./controllers/contact');
 var newsletterController = require('./controllers/newsletter');
 var downloadController = require('./controllers/download');
+
+
 
 // React and Server-Side Rendering
 var routes = require('./app/routes');
@@ -75,12 +78,20 @@ app.use(cookieParser());
 
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '.', 'build')));
+
+// presentation
+app.get('/apresentacao', (req, res) => {
+    var filePath = "./Amigossauro_RioContentMkt.pdf";
+    var file = fs.createReadStream('./Amigossauro_RioContentMkt.pdf');
+    var stat = fs.statSync('./Amigossauro_RioContentMkt.pdf');
+    res.setHeader('Content-Length', stat.size);
+    res.setHeader('Content-Type', 'application/pdf');
+    file.pipe(res);
+});
 // Always return the main index.html, so react-router render the route in the client
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '.', 'build', 'index.html'));
 });
-
-
 
 app.use(function(req, res, next) {
   req.isAuthenticated = function() {

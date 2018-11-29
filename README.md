@@ -1,5 +1,7 @@
 ## Amigossauro new project 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ronal2do/Amigossauro.svg)](https://greenkeeper.io/)
+
 Studies React.js
 
 ### Configuration
